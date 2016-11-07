@@ -1,4 +1,4 @@
-# Juss
-A new simple css framework.
+# CBuy
+A classic mobile shop template.
 
-Base on Normalize-css and BPM.
+Base on [juss](https://github.com/ChanMo/juss).
