@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="container address">
+  {% for i in range(0,2) %}
+  <div class="address__item">
+    <div class="address__header">
+      <h6>Someone<span class="float-right">15550000000</span></h6>
+      <p>China, Luoyang</p>
+    </div>
+    <div class="address__action">
+      <input name="default" type="radio" id="radio_{{ i }}"><label for="radio_{{ i }}">set default</label>
+      <div class="float-right">
+        <a href="address_form.html"><i class="fa fa-edit"></i>Edit</a>
+        <a href="#"><i class="fa fa-trash"></i>Delete</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  <a href="address_form.html" class="button button_size_full">add new</a>
+</div>
+{% endblock %}

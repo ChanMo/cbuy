@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="container category">
+  {% for i in range(0,3) %}
+  <a href="list.html">
+    <i class="fa fa-car"></i>
+    <span>name</span>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

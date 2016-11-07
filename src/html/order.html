@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="container order">
+  <div class="order__nav">
+    <ul class="menu">
+      <li class="active"><a href="#">待支付</a></li>
+      <li><a href="#">待发货</a></li>
+      <li><a href="#">待收获</a></li>
+      <li><a href="#">待评价</a></li>
+      <li><a href="#">完成</a></li>
+    </ul>
+  </div>
+  <div class="order__main">
+  </div>
+</div>
+{% endblock %}
+{% block js %}
+<script>
+$(function(){
+  $(".order__main").load('order_list.html');
+});
+</script>
+{% endblock %}

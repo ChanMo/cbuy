@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="container commodity">
+  <div class="commodity__header">
+    <img src="https://s-media-cache-ak0.pinimg.com/564x/3a/52/0e/3a520efe2727038fa19a725a661796e6.jpg">
+    <div class="commodity__title">
+      <p>69's Camaro</p>
+      <span class="price"><i class="fa fa-rmb" style="font-size:0.6rem"></i>1200</span>
+    </div>
+  </div>
+  <div class="commodity__param">
+    <div class="commodity__param__item">
+      <h6>Color:</h6>
+      <ul>
+        <li class="active"><a href="#">black</a></li>
+        <li><a href="#">red</a></li>
+      </ul>
+    </div>
+    <div class="commodity__param__item">
+      <h6>Date:</h6>
+      <ul>
+        <li class="active"><a href="#">1969</a></li>
+      </ul>
+    </div>
+    <div class="commodity__param__item">
+      <span class="float-right">1</span>
+      <h6>Count:</h6>
+    </div>
+    <div class="commodity__param__item">
+      <span class="price float-right">12.00</span>
+      <h6>Delivery:</h6>
+    </div>
+  </div>
+  <div class="commodity__intro">
+    <h5>Intro</h5>
+    <img src="https://s-media-cache-ak0.pinimg.com/564x/03/85/83/0385836471cb888c8a2771039513d17f.jpg">
+  </div>
+</div>
+
+<a href="#" class="buy-now">
+  <i class="fa fa-arrow-right"></i>
+</a>
+<a href="cart.html" class="cart-add">
+  <i class="fa fa-cart-plus"></i>
+</a>
+
+{% endblock %}

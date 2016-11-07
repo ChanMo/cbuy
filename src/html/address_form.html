@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="container address-form">
+  <form method="POST">
+    <input type="text" name="name" placeholder="input ypur name">
+    <input type="tel" name="mobile" placeholder="input your mobile">
+    <input id="zone-picker-input" type="text" name="zone" placeholder="input your zone" data-zone-picker-toggle readonly>
+    <textarea name="address" placeholder="input your address"></textarea>
+    <input type="submit" value="save" class="button button_size_full">
+  </form>
+</div>
+
+<div class="zone-picker_bg" data-zone-picker-toggle></div>
+<div class="zone-picker">
+  <div class="zone-picker__header text-center">
+    <span>Zone Picker</span>
+    <i class="fa fa-remove float-right" data-zone-picker-toggle></i>
+  </div>
+  <div class="zone-picker__nav">
+    <ul class="menu">
+      <li class="active"><a href="#">请选择</a></li>
+    </ul>
+  </div>
+  <div class="zone-picker__main">
+    <ul></ul>
+  </div>
+</div>
+{% endblock %}
+{% block js %}
+<script>
+  $(function(){
+    zone_data = [];
+    $.ajax({
+      url: 'js/zone.json',
+      data: 'json',
+      success: function(data){
+        //console.log(data);
+        zone_data = data;
+        var province = '';
+        for(var i=1;i<data.length;i++){
+          province += '<li><a href="#">'+data[i].name+'</a></li>';
+        }
+        $(".zone-picker__main ul:eq(0)").html(province);
+        $(".zone-picker__main ul:eq(0)").data("zone_data", data);
+        //console.log(typeof(data));
+        //console.log(eval(data));
+      }
+    });
+  });
+
+
+$(".zone-picker__main").on("click", "a", function(e){
+  e.preventDefault();
+  var type = $(this).parents("ul").index();
+
+  var li = $(this).parent("li");
+  var ul = $(this).parents("ul");
+  var ul_index = ul.index();
+  var nav = $(".zone-picker__nav").find("li").eq(ul_index);
+  var data = ul.data("zone_data");
+
+  /** change li active **/
+  li.addClass("active");
+  li.siblings("li").removeClass("active");
+
+  var current = $(this).parent("li").index();
+  child_data = data[current+1]['sub'];
+
+  if(!child_data){
+    var value = '';
+    var parents = nav.prevAll();
+    parents.each(function(){
+      value += $(this).find("a").html();
+    });
+    value += $(this).html();
+
+    $("#zone-picker-input").val(value);
+    $(".zone-picker").removeClass("zone-picker_active");
+    $(".zone-picker_bg").hide();
+    return true;
+  }
+  //zone_data = child_data;
+
+  /** change next ul **/
+  ul.hide();
+  ul.after("<ul data-zone_data='"+JSON.stringify(child_data)+"'></ul>");
+
+  /** change nav ul **/
+  var ul_index = $(this).parents("ul").index();
+  nav.removeClass("active");
+  nav.find("a").html($(this).html());
+  nav.after("<li class='active'><a href='#'>请选择</a></li>");
+
+  var child = '';
+  for(var i=1;i<child_data.length;i++){
+    child += '<li><a href="#">'+child_data[i]['name']+'</a></li>';
+  }
+  ul.next("ul").html(child);
+
+});
+
+$(".zone-picker__nav").on("click", "a", function(e){
+  e.preventDefault();
+  /** nav **/
+  var current = $(this).parent("li").index();
+  $(this).parent("li").addClass("active");
+  $(this).parent("li").nextAll().remove();
+  $(this).parent("li").siblings().removeClass("active");
+
+  /** ul **/
+  var current_ul = $(".zone-picker__main").find("ul").eq(current);
+  current_ul.show();
+  current_ul.nextAll().remove();
+  current_ul.siblings().hide();
+});
+
+$("[data-zone-picker-toggle]").bind("click", function(e){
+  e.preventDefault();
+  $(".zone-picker_bg").toggle();
+  $(".zone-picker").toggleClass("zone-picker_active");
+});
+</script>
+{% endblock %}

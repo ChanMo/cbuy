@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block topbar %}{% endblock %}
+{% block main %}
+<div class="container home">
+  <div class="home__header">
+    <img src="img/home_header.png">
+  </div>
+  <div class="home__main">
+		{% for i in range(0,6) %}
+    <a href="category.html">
+      <img src="img/home_icon{{ i+1 }}.png">
+      <div>name</div>
+    </a>
+		{% endfor %}
+  </div>
+</div>
+{% endblock %}

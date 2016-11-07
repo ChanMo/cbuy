@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="container order-create">
+  <div class="order-create__item">
+    <h5>Commodity</h5>
+    <div class="">
+      {% for i in range(0,2) %}
+      {% include "commodity_item.html" %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="order-create__item">
+    <h5>Address</h5>
+    <p>ChanMo</p>
+    <p>15550000000</p>
+    <p>China, Luoyang</p>
+  </div>
+  <div class="order-create__item">
+    <h5>Price</h5>
+    <p>Price:<span class="float-right">1200</span></p>
+    <p>devialy:<span class="float-right">20</span></p>
+    <p>Price All:<span class="float-right price">1220</span></p>
+  </div>
+  <div class="order-create__item text-right">
+    <a href="order_create_success.html">Checkout</a>
+  </div>
+</div>
+{% endblock %}
