@@ -11,9 +11,14 @@
   </div>
   <div class="order-create__item">
     <h5>Address</h5>
-    <p>ChanMo</p>
-    <p>15550000000</p>
-    <p>China, Luoyang</p>
+    <div class="order-create__box">
+      {% for i in range(0,3) %}
+      <div class="order-create__address {% if loop.first %}order-create__address_active{% endif %}">
+        <h6>ChanMo<span>15550000000</span></h6>
+        <p>China, Luoyang</p>
+      </div>
+      {% endfor %}
+    </div>
   </div>
   <div class="order-create__item">
     <h5>Price</h5>

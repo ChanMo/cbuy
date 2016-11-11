@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="container car-brand">
+  <ul class="car-ul">
+    {% for i in range(0,8) %}
+    <li><a href="car_model.html"><img src="http://www.carlogos.org/logo/BMW-logo.jpg">Audi</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

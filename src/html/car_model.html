@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="container car-model">
+  <div class="car-header">
+    <img src="http://www.carlogos.org/logo/Mercedes-Benz-logo.jpg">
+    Mercedes-Benz
+  </div>
+  <ul class="car-ul">
+    {% for i in range(0,8) %}
+    <li><a href="car_year.html">A6</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
