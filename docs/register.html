@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="zh-hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>CheMY</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.min.css">
+  </head>
+  <body>
+    
+    
+<div class="container register">
+  <div class="register__main">
+    <div class="register__form">
+      <h1>Register</h1>
+      <form method="get" action="shop_main.html">
+        <label for="form-name">
+          <input type="text" id="form-name" name="name" placeholder="input your name">
+        </label>
+        <label for="form-mobile">
+          <input type="tel" id="form-mobile" name="mobile" placeholder="input your mobile">
+        </label>
+        <input type="checkbox" id="form-agreement"><label for="form-agreement">check this first <a href="/">read this</a></label>
+        <input disabled type="submit" value="Register">
+      </form>
+      <p><a href="#">forget user/password</a></p>
+      <p><a href="#">login</a></p>
+    </div>
+  </div>
+</div>
+
+    
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/juss.min.js"></script>
+    <script src="js/app.min.js"></script>
+    
+<script>
+  $(function(){
+    $(".register__form").addClass("register__form_active");
+    $("input[type='checkbox']").change(function(){
+      if($(this).prop('checked') == true){
+        $("input[type='submit']").removeAttr("disabled");
+      }else{
+        $("input[type='submit']").attr("disabled","disabled");
+      }
+    });
+  });
+</script>
+
+  </body>
+</html>

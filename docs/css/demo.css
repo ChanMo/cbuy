@@ -518,7 +518,7 @@ textarea {
   height: 2.5rem;
   margin: 0 0 1rem 0;
   padding: 0 0.5rem;
-  line-height: 2.5rem;
+  line-height: auto;
   border: 1px solid #9e9e9e;
   border-radius: 0;
   -webkit-box-sizing: border-box;

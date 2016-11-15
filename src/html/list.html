@@ -1,18 +1,121 @@
 {% extends "base.html" %}
+{% block topbar %}{% endblock %}
+{% block footer %}{% endblock %}
 {% block main %}
 <div class="container list">
   <div class="list__search">
+    <div class="list__search__bar">
+      <a href="javascript:window.history.back();"><i class="fa fa-angle-left fa-lg"></i></a>
+      <label>
+        <input type="search" placeholder="search">
+      </label>
+      <a href="#" id="list-style"><i class="fa fa-th-large"></i></a>
+      <a href="#" id="search-cancle">cancle</a>
+    </div>
+    <div class="list__search__suggest">
+      <ul>
+        <li><a href="#">blackberry priv</a></li>
+        <li><a href="#">blackberry passport</a></li>
+        <li><a href="#">kindle</a></li>
+        <li><a href="#">pebble2</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="list__filter">
+    <ul class="list__filter__main">
+      <li data-ul-toggle="#filter-children"><a href="#"><span>Hot</span><i class="fa fa-angle-up"></i></a></li>
+      <li class="active"><a href="#"><span>Sale</span></a></li>
+      <li><a href="#"><span>Price</span><i class="fa fa-sort"></i></a></li>
+      <li><a href="#" data-filterbox-toggle><span>Filter</span><i class="fa fa-filter"></i></a></li>
+    </ul>
+    <ul class="list__filter__children" id="filter-children">
+      <li data-name="hot"><a href="#">sort by hoter</a></li>
+      <li data-name="new" class="active"><a href="#">sort by newer</a></li>
+      <li data-name="rate"><a href="#">sort by rate</a></li>
+    </ul>
   </div>
   <div class="list__main">
     {% for i in range(0,4) %}
     <a href="commodity.html">
       <img src="https://s-media-cache-ak0.pinimg.com/564x/11/f3/bd/11f3bdc6800bca9fd135dd6f0a593b75.jpg">
       <div>
-      <p>1969 Chevy Camaro Convertible</p>
-      <span class="price"><i class="fa fa-rmb"></i>1200</span>
+        <p>1969 Chevy Camaro Convertible</p>
+        <span class="price"><i class="fa fa-rmb"></i>1200</span>
       </div>
     </a>
     {% endfor %}
   </div>
 </div>
+
+<div class="filter-box__bg" id="filterbox-bg" data-filterbox-toggle></div>
+<div class="filter-box" id="filterbox">
+  <div class="filter-box__main">
+    <ul>
+      {% for i in range(0,95) %}
+      <li>test</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="filter-box__action">
+    <a href="#" data-filterbox-toggle>Reset</a>
+    <a href="#">Ok</a>
+  </div>
+</div>
+{% endblock %}
+{% block js %}
+<script>
+  $(function(){
+    $("[data-filterbox-toggle]").bind("click", function(e){
+      e.preventDefault();
+      console.log(1);
+      $("#filterbox").toggleClass("filter-box_active");
+      $("#filterbox-bg").toggle();
+    });
+    $("[type='search']").on("focus", function(e){
+      if(!$(".list__search").hasClass("list__search_active")) {
+        $(".list__search").addClass("list__search_active");
+        //$(".list__search__suggest").show();
+      }
+    });
+    $("#search-cancle").bind("click", function(e){
+      $(".list__search").removeClass("list__search_active");
+    });
+
+    $("#list-style").bind("click", function(e){
+      $(".list__main").toggleClass("list__main_list");
+      $(this).find("i").toggleClass("fa-th-list");
+    });
+
+    $("[data-ul-toggle]").on("click", function(e){
+      e.preventDefault();
+      var children = $(this).data("ul-toggle");
+      $(children).slideToggle();
+      $(this).find("i").toggleClass("fa-angle-down");
+    });
+
+    $(".list__filter__children a").on("click", function(e){
+      e.preventDefault();
+      var li = $(this).parent("li");
+      var name = li.data("name");
+      li.addClass("active");
+      li.siblings("li").removeClass("active");
+      li.parent("ul").slideToggle();
+      var id = $(this).parents(".list__filter__children").attr("id");
+      var toggle = $("[data-ul-toggle='#"+id+"']");
+      toggle.find("span").html(name);
+      toggle.find("i").removeClass("fa-angle-down");
+      toggle.addClass("active");
+      toggle.siblings("li").removeClass("active");
+    });
+
+
+    $(".list__search__suggest a").on("click", function(e){
+      e.preventDefault();
+      var name = $(this).html();
+      $(this).parents(".list__search").removeClass("list__search_active");
+      $("[type='search']").val(name);
+    });
+  })
+
+</script>
 {% endblock %}
