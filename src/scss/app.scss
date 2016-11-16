@@ -80,11 +80,15 @@ div {
 .top-bar {
   height: 3rem;
   line-height: 3rem;
+  padding: 0 1rem;
   background: $primary-color;
-  color: white;
   text-align: center;
   span {
-    margin-left: .5rem;
+      margin-left: .5rem;
+      color: white;
+  }
+  i {
+      color: white;
   }
 }
 
@@ -167,32 +171,32 @@ div {
       width: 50vw;
     }
   }
-	&__main {
-		display: flex;
-		flex-wrap: wrap;
-    justify-content: space-around;
-		a {
-			display: block;
-			width: 48vw;
-      margin-top: .5rem;
-			padding: .5rem;
-			box-sizing: border-box;
-			text-align: center;
-			background: white;
-			img {
-				width: 16vw;
-			}
-			div {
-				text-align: center;
-				color: darkgrey;
-        font-size: 0.85rem;
-			}
-		}
-	}
+  &__main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      a {
+	  display: block;
+	  width: 48vw;
+          margin-top: .5rem;
+	  padding: .5rem;
+	  box-sizing: border-box;
+	  text-align: center;
+	  background: white;
+	  img {
+	      width: 16vw;
+	  }
+	  div {
+	      text-align: center;
+	      color: darkgrey;
+              font-size: 0.85rem;
+	  }
+      }
+  }
 }
 
 .category {
-  padding: 1rem 1rem .5rem;
+  padding: 1rem 1rem 3.5rem;
   a {
     display: block;
     height: 18vh;
@@ -419,6 +423,55 @@ div {
         height: calc(100% - 3rem);
         overflow-y: scroll;
     }
+    &__item {
+        padding: .5rem;
+        clear: both;
+        h6 {
+            color: grey;
+            i {
+                transition: all .5s;
+            }
+            .active {
+                transform: rotate(180deg);
+            }
+        }
+
+        a {
+            display: block;
+            width: 30%;
+            height: 1.8rem;
+            line-height: 1.8rem;
+            margin-bottom: .5rem;
+            padding: 0 .5rem;
+            box-sizing: border-box;
+            background: lightgrey;
+            color: #333;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            float: left;
+            margin-right: 5%;
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+
+        div {
+            height: auto;
+            transition: all .5s;
+            .active {
+                background: rgba(red,0.7);
+                color: white;
+            }
+        }
+    }
+    &__main .toggle {
+        div {
+            height: 1.8rem*2 + 0.8rem;
+            overflow: hidden;
+        }
+    }
     &__action {
         position: absolute;
         bottom: 0;
@@ -444,84 +497,104 @@ div {
     }
 }
 
+.scroll-to-top {
+    &,&:hover,&:visited {
+        position: fixed;
+        right: 5%;
+        bottom: 10%;
+        display: block;
+        $size: 2.5rem;
+        width: $size;
+        height: $size;
+        border-radius: $size;
+        line-height: $size;
+        text-align: center;
+        background: rgba(red,0.8);
+        color: white;
+        display: none;
+    }
+
+}
+
 .commodity {
-  &__header {
-    margin-bottom: .5rem;
-    background: white;
-  }
-  &__title {
-    padding: 0.5rem;
-    p {
-      margin: 0;
+    padding-bottom: 3.5rem;
+    &__header {
+        margin-bottom: .5rem;
+        background: white;
     }
-  }
+    &__title {
+        padding: 0.5rem;
+        p {
+            margin: 0;
+        }
+    }
 
-  &__param {
-    margin-bottom: .5rem;
-    padding: .5rem;
-    background: white;
-    &__item {
-      padding: .5rem 0;
-      border-bottom: 1px dashed #efefef;
-      h6 {
-        margin: 0;
-        font-weight: 0;
-      }
+    &__param {
+        margin-bottom: .5rem;
+        padding: .5rem;
+        background: white;
+        &__item {
+            padding: .5rem 0;
+            border-bottom: 1px dashed #efefef;
+            h6 {
+                margin: 0;
+                font-weight: 0;
+            }
+        }
+        ul {
+            margin: .5rem 0 0;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+        }
+        li a {
+            padding: .3rem 1rem;
+            border-radius: .5rem;
+            background: lightgrey;
+            color: rgba(black, 0.6);
+        }
+        .active a {
+            background: $primary-color;
+            color: white;
+        }
     }
-    ul {
-      margin: .5rem 0 0;
-      padding: 0;
-    }
-    li {
-      display: inline-block;
-    }
-    li a {
-      padding: .3rem 1rem;
-      border-radius: .5rem;
-      background: lightgrey;
-      color: rgba(black, 0.6);
-    }
-    .active a {
-      background: $primary-color;
-      color: white;
-    }
-  }
 
-  &__intro {
-    background: white;
-    img {
-      max-width: 100%;
-      height: auto !important;
+    &__intro {
+        background: white;
+        img {
+            max-width: 100%;
+            height: auto !important;
+        }
     }
-  }
 }
 .cart-add {
-  &,
-  &:hover {
-  $size: 3rem;
-  position: fixed;
-  bottom: 4.5rem;
-  right: 1rem;
-  display: inline;
-  width: $size;
-  height: $size;
-  border-radius: $size;
-  background: rgba($primary-color, 0.9);
-  color: white;
-  line-height: $size;
-  text-align: center;
-}
+    &,
+    &:hover {
+        $size: 3rem;
+        position: fixed;
+        bottom: 4.5rem;
+        right: 1rem;
+        display: inline;
+        width: $size;
+        height: $size;
+        border-radius: $size;
+        background: rgba($primary-color, 0.9);
+        color: white;
+        line-height: $size;
+        text-align: center;
+    }
 }
 .buy-now {
-  &,
-  *:hover {
-  @extend .cart-add;
-  bottom: 4.5rem + 3rem + .5rem;
-  }
+    &,
+    &:hover {
+        @extend .cart-add;
+        bottom: 4.5rem + 3rem + .5rem;
+    }
 }
 
 .cart {
-  padding: 1rem .5rem 4rem;
+  padding: 1rem .5rem 7.5rem;
   &__item {
     background: white;
     padding: 0 .5rem;
@@ -657,6 +730,7 @@ div {
 }
 
 .order {
+    padding-bottom: 3.5rem;
   &__nav {
     ul {
       display: flex;
@@ -728,7 +802,7 @@ div {
 }
 
 .order-detail {
-  padding: .5rem;
+  padding: .5rem .5rem 3.5rem;
   &__header {
     padding: 0 .5rem;
     background: white;
@@ -791,17 +865,21 @@ div {
     padding: .5rem;
   }
 }
+
+
 .order-create {
-    padding: .5rem;
+    padding: .5rem .5rem 3.5rem;
     p {
         margin: 0;
         font-size: 0.85rem;
     }
+
     &__item {
         background: white;
         margin-bottom: .5rem;
         padding: .5rem;
     }
+
     h5 {
         padding-bottom: .5rem;
         border-bottom: 1px solid #efefef;
@@ -810,11 +888,11 @@ div {
             float: right;
         }
     }
+
     .commodity-item:not(:last-child) {
         border-bottom: 1px dashed #efefef;
     }
-    &__box {
-    }
+
     &__address {
         padding: .5rem .5rem .5rem 2rem;
         box-sizing: border-box;
@@ -854,7 +932,28 @@ div {
             opacity: 1;
         }
     }
+
+    &__shop {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            a {
+                display: block;
+                padding: .5rem 1rem;
+                border-bottom: 1px dashed #eee;
+                color: grey;
+            }
+        }
+        &_active {
+            a {
+                color: $primary-color !important;
+            }
+        }
+    }
 }
+
+
 .order-create-success {
     &__main {
         margin: 2rem auto;
@@ -1322,5 +1421,31 @@ $shop-color: #1D9E74;
         border: none;
         padding: .5rem 0;
         width: 100%;
+    }
+}
+
+.shop-list {
+    &__main {
+        background: white;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        a {
+            display: block;
+            padding: .5rem;
+            border-bottom: 1px solid #eee;
+            &:before {
+                content: "\f105";
+                font-family: FontAwesome;
+                float: right;
+                transform: translateY(50%);
+            }
+        }
+        p {
+            color: #333;
+            margin: 0;
+        }
     }
 }

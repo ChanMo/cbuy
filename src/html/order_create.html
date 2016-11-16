@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 {% block main %}
 <div class="container order-create">
+
   <div class="order-create__item">
     <h5>Commodity</h5>
-    <div class="">
+    <div>
       {% for i in range(0,2) %}
       {% include "commodity_item.html" %}
       {% endfor %}
     </div>
   </div>
+
   <div class="order-create__item">
     <h5>Address</h5>
     <div class="order-create__box">
@@ -20,12 +22,26 @@
       {% endfor %}
     </div>
   </div>
+
+  <div class="order-create__item">
+    <h5>Use shop?<input type="checkbox" id="use-shop"><label class="float-right" for="use-shop"></label></h5>
+    <div class="order-create__box">
+      {% for i in range(0,3) %}
+      <div class="order-create__address {% if loop.first %}order-create__address_active{% endif %}">
+        <h6>FindChen<span>15550000000</span></h6>
+        <p>China, Luoyang</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
   <div class="order-create__item">
     <h5>Price</h5>
     <p>Price:<span class="float-right">1200</span></p>
     <p>devialy:<span class="float-right">20</span></p>
     <p>Price All:<span class="float-right price">1220</span></p>
   </div>
+
   <div class="order-create__item text-right">
     <a href="order_create_success.html">Checkout</a>
   </div>

@@ -34,58 +34,104 @@
       <li data-name="rate"><a href="#">sort by rate</a></li>
     </ul>
   </div>
-  <div class="list__main">
-    {% for i in range(0,4) %}
-    <a href="commodity.html">
-      <img src="https://s-media-cache-ak0.pinimg.com/564x/11/f3/bd/11f3bdc6800bca9fd135dd6f0a593b75.jpg">
-      <div>
-        <p>1969 Chevy Camaro Convertible</p>
-        <span class="price"><i class="fa fa-rmb"></i>1200</span>
-      </div>
-    </a>
-    {% endfor %}
+
+  <div class="list__main" data-url="list_item.html" onload="load_more(this)">
   </div>
 </div>
+
+<a href="#" class="scroll-to-top"><i class="fa fa-arrow-up"></i></a>
 
 <div class="filter-box__bg" id="filterbox-bg" data-filterbox-toggle></div>
 <div class="filter-box" id="filterbox">
   <div class="filter-box__main">
-    <ul>
-      {% for i in range(0,95) %}
-      <li>test</li>
-      {% endfor %}
-    </ul>
+    <div class="filter-box__item filter-box__item_radio">
+      <h6>Category<i class="fa fa-angle-down float-right hide"></i></h6>
+      <div>
+        {% for j in range(0,2) %}
+        <a href="#">namename</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% for i in range(0,4) %}
+    <div class="filter-box__item">
+      <h6>Category<i class="fa fa-angle-down float-right"></i></h6>
+      <div>
+        {% for j in range(0,8) %}
+        <a href="#">namename</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
   </div>
   <div class="filter-box__action">
     <a href="#" data-filterbox-toggle>Reset</a>
-    <a href="#">Ok</a>
+    <a href="#" data-filterbox-toggle>Ok</a>
   </div>
 </div>
 {% endblock %}
 {% block js %}
 <script>
   $(function(){
+    /** filter box **/
     $("[data-filterbox-toggle]").bind("click", function(e){
       e.preventDefault();
       console.log(1);
       $("#filterbox").toggleClass("filter-box_active");
       $("#filterbox-bg").toggle();
     });
+
+    var filter_items = $(".filter-box__item");
+    filter_items.each(function(){
+      var item_count = $(this).find("div a").length;
+      if(item_count > 6) {
+        $(this).addClass("toggle");
+        $(this).find("i").show();
+      }
+    });
+
+    $(".filter-box__item i").on("click", function(e){
+      $(this).toggleClass("active");
+      $(this).parents(".filter-box__item").toggleClass("toggle");
+    });
+
+    $(".filter-box__item a").on("click", function(e){
+      e.preventDefault();
+      if($(this).parents(".filter-box__item").hasClass("filter-box__item_radio")){
+        if(!$(this).hasClass("active")){
+          /** new add **/
+          $(this).siblings("a").removeClass("active");
+        }
+      }else{
+      }
+      $(this).toggleClass("active");
+    });
+
+
+    /** search **/
     $("[type='search']").on("focus", function(e){
       if(!$(".list__search").hasClass("list__search_active")) {
         $(".list__search").addClass("list__search_active");
-        //$(".list__search__suggest").show();
       }
     });
     $("#search-cancle").bind("click", function(e){
       $(".list__search").removeClass("list__search_active");
     });
+    $(".list__search__suggest a").on("click", function(e){
+      e.preventDefault();
+      var name = $(this).html();
+      $(this).parents(".list__search").removeClass("list__search_active");
+      $("[type='search']").val(name);
+    });
 
+
+    /** list style **/
     $("#list-style").bind("click", function(e){
       $(".list__main").toggleClass("list__main_list");
       $(this).find("i").toggleClass("fa-th-list");
     });
 
+
+    /** toggle ul **/
     $("[data-ul-toggle]").on("click", function(e){
       e.preventDefault();
       var children = $(this).data("ul-toggle");
@@ -109,13 +155,49 @@
     });
 
 
-    $(".list__search__suggest a").on("click", function(e){
+    $(".scroll-to-top").on("click", function(e){
       e.preventDefault();
-      var name = $(this).html();
-      $(this).parents(".list__search").removeClass("list__search_active");
-      $("[type='search']").val(name);
+      $("html,body").animate({scrollTop:0}, "slow");
+    });
+
+    /** scroll load **/
+    wh = $(window).height();
+    load_over = false;
+    var wt, dh;
+    load_more(".list__main");
+    $(window).scroll(function(){
+      wt = $(window).scrollTop();
+      dh = $(document).height();
+
+      /** load more event **/
+      if(wt == dh-wh){
+        if(!load_over){
+          load_more(".list__main");
+        }
+      }
+
+      /** scroll-to-top icon **/
+      if(wt > wh){
+        $(".scroll-to-top").show();
+      }else{
+        $(".scroll-to-top").hide();
+      }
+
+
+      return false;
     });
   })
 
+
+function load_more(ele){
+  var url = $(ele).data("url");
+  //console.log(url);
+  $.ajax({
+    url: url,
+    success: function(result){
+      $(ele).append(result);
+    }
+  });
+}
 </script>
 {% endblock %}
