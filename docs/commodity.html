@@ -13,15 +13,14 @@
 
 
     
-<div class="top-bar">
+<div class="top-bar commodity-topbar">
   <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
 </div>
-
 
 <div class="container commodity">
 
   <div class="commodity__header">
-    <div class="slide" style="height:30vh;">
+    <div class="slide" style="height:50vh;">
       <ul class="slide__main">
         <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/d2/39/38/d23938218aa1bea612b4679b93ae082e.jpg);"></a></li>
         <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/d4/c3/a3/d4c3a342332ff8f046c91e327512e1a6.jpg);"></a></li>
@@ -44,24 +43,14 @@
     </div>
   </div>
 
-
   <div class="commodity__param">
     <div class="commodity__param__item">
+      <span class="float-right">black/white</span>
       <h6>Color:</h6>
-      <ul>
-        <li class="active"><a href="#">black</a></li>
-        <li><a href="#">red</a></li>
-      </ul>
     </div>
     <div class="commodity__param__item">
-      <h6>Date:</h6>
-      <ul>
-        <li class="active"><a href="#">1969</a></li>
-      </ul>
-    </div>
-    <div class="commodity__param__item">
-      <span class="float-right">1</span>
-      <h6>Count:</h6>
+      <span class="float-right">175/180</span>
+      <h6>Size:</h6>
     </div>
     <div class="commodity__param__item">
       <span class="price float-right">12.00</span>
@@ -77,9 +66,57 @@
 </div>
 
 <div class="commodity-action">
-  <a href="javascript:;"><i class="fa fa-star-o"></i></a>
-  <a href="order_create.html" class="float-right">购买&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
-  <a href="#" class="float-right">加入购物车&nbsp;&nbsp;</a>
+  <a href="javascript:;" class="commodity-action__collect"><i class="fa fa-star-o"></i><span>收藏</span></a>
+  <a href="order_create.html" data-select-toggle class="commodity-action__buy"><span>购买</span><i class="fa fa-arrow-right"></i></a>
+</div>
+
+
+<div class="commodity-select_bg" data-select-toggle></div>
+<div class="commodity-select">
+  <div class="commodity-select__header">
+    <a href="#" data-select-toggle class="float-right"><i class="fa fa-remove"></i></a>
+    <div>
+      <p><span class="price">1200</span></p>
+      <p>param:</p>
+    </div>
+    <img src="https://s-media-cache-ak0.pinimg.com/564x/f7/78/4f/f7784f36ed59f89f17b375b063fa3932.jpg">
+  </div>
+  <div class="commodity-select__param">
+    <h6>color</h6>
+    <ul>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+    </ul>
+    <h6>count
+      <div>
+        <i>-</i>
+        <span>1</span>
+        <i>+</i>
+      </div>
+    </h6>
+
+  </div>
+  <div class="commodity-select__action">
+    <a href="#">add</a>
+    <a href="#">buy</a>
+  </div>
 </div>
 
 
@@ -89,5 +126,21 @@
     <script src="js/app.min.js"></script>
 
     
+<script>
+  $(function(){
+    $(".commodity-select__param ul a").on("click", function(e){
+      e.preventDefault();
+      $(this).parent("li").addClass("active");
+      $(this).parent("li").siblings("li").removeClass("active");
+    });
+
+    $("[data-select-toggle]").on("click", function(e){
+      e.preventDefault();
+      $(".commodity-select").toggleClass("commodity-select_active");
+      $(".commodity-select_bg").toggle();
+    });
+  });
+</script>
+
   </body>
 </html>

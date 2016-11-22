@@ -1942,8 +1942,18 @@ div {
         background: red;
         color: white; }
 
+.commodity-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0); }
+  .commodity-topbar a {
+    color: white; }
+
 .commodity {
-  padding-bottom: 3.5rem; }
+  padding: 0 0 3.5rem; }
   .commodity__header {
     margin-bottom: .5rem;
     background: white; }
@@ -1988,10 +1998,116 @@ div {
   height: 3.5rem;
   line-height: 3.5rem;
   padding: 0 1rem;
-  background: white;
+  background: black;
   border-top: 1px solid #eee; }
   .commodity-action a {
-    color: black; }
+    color: white; }
+  .commodity-action__collect span {
+    font-size: 0.85rem;
+    margin-left: .5rem; }
+  .commodity-action__buy {
+    float: right; }
+    .commodity-action__buy span {
+      margin-right: .5rem; }
+
+.commodity-select_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  display: none; }
+
+.commodity-select {
+  z-index: 10000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  transform: translateY(110%);
+  transition: all 0.5; }
+  .commodity-select .fa-remove {
+    color: #333; }
+  .commodity-select__header {
+    padding: .5rem;
+    position: relative;
+    border-bottom: 1px solid #eee; }
+    .commodity-select__header:after {
+      content: '';
+      clear: both;
+      display: block; }
+    .commodity-select__header img {
+      position: absolute;
+      bottom: 1rem;
+      left: 5%;
+      width: 40%;
+      box-sizing: border-box;
+      border: 1px solid #ddd; }
+    .commodity-select__header div {
+      margin-top: 1.5rem;
+      padding: 0 0 0 50%; }
+      .commodity-select__header div p {
+        margin: 0; }
+      .commodity-select__header div .price {
+        color: red; }
+  .commodity-select__param {
+    height: 50vh;
+    max-height: 50vh;
+    overflow: scroll;
+    padding: 1rem; }
+    .commodity-select__param h6 {
+      margin: .5rem 0; }
+      .commodity-select__param h6 div {
+        display: inline-block;
+        float: right;
+        border: 1px solid lightgrey;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        border-radius: 5px; }
+        .commodity-select__param h6 div span {
+          border-left: 1px solid lightgrey;
+          border-right: 1px solid lightgrey;
+          display: inline-block;
+          padding: 0 .5rem;
+          box-sizing: border-box;
+          font-size: 0.85rem; }
+        .commodity-select__param h6 div i {
+          display: inline-block;
+          box-sizing: border-box;
+          padding: 0 .3rem; }
+    .commodity-select__param ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none; }
+      .commodity-select__param ul li, .commodity-select__param ul a {
+        display: inline-block; }
+      .commodity-select__param ul a {
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        padding: .2rem 1rem;
+        margin-bottom: .5rem;
+        color: #333; }
+      .commodity-select__param ul .active a {
+        border-color: red; }
+  .commodity-select__action {
+    height: 3rem;
+    line-height: 3rem;
+    display: flex; }
+    .commodity-select__action a {
+      display: block;
+      width: 50%;
+      text-align: center;
+      color: white; }
+      .commodity-select__action a:nth-child(1) {
+        background: orange; }
+      .commodity-select__action a:nth-child(2) {
+        background: red; }
+
+.commodity-select_active {
+  transform: translateY(0); }
 
 .me {
   padding: 0 0 4rem; }
