@@ -1,0 +1,109 @@
+.me {
+    padding: 0 0 4rem;
+    &__header {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        padding: 2.5rem 0 .5rem;
+        margin-bottom: .5rem;
+        img {
+            $size: 25vw;
+            width: $size;
+            height: $size;
+            border-radius: $size;
+            border: 1px solid white;
+            transform: translate3d(0,-100%,0);
+            transition: all .5s;
+        }
+        .active {
+            transform: translate3d(0,0,0);
+        }
+        h6 {
+            color: white;
+            margin: .5rem 0;
+        }
+    }
+    &__item {
+        margin-bottom: .5rem;
+        background: white;
+        h6 {
+            margin: 0;
+            padding: 0 .5rem;
+            height: 3rem;
+            line-height: 3rem;
+
+            a {
+                float: right;
+                font-size: 0.9rem;
+                color: grey;
+                &:after {
+                    content: "\f105";
+                    font-family: FontAweSome;
+                    margin-left: .5rem;
+                }
+            }
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: normal;
+            border-top: 1px solid #eee;
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            li {
+                display: block;
+                width: 20%;
+                float: left;
+                text-align: center;
+                padding: 1rem 0;
+                position: relative;
+                a {
+                    color: black;
+                }
+                img {
+                    width: 35%;
+                }
+                span {
+                    position: absolute;
+                    display: inline-block;
+                    $size: 0.9rem;
+                    font-size: 0.6rem;
+                    width: $size;
+                    height: $size;
+                    border-radius: $size;
+                    background: red;
+                    color: white;
+                    text-align: center;
+                    line-height: $size;
+                    //transform: scale();
+                }
+                p {
+                    font-size: 0.8rem;
+                    margin: 5px 0 0;
+                }
+            }
+        }
+        table {
+            border: none;
+            td {
+                border-color: #eee;
+                text-align: center;
+                a {
+                    img {
+                        width: 45%;
+                    }
+                    color: black;
+                    font-size: 0.8rem;
+                    p {
+                        margin: 5px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="container login">
+  <div class="login__main">
+    <div class="login__form">
+      <h1>Login</h1>
+      <form method="get" action="index.html">
+        <label for="form-name">
+          <input type="text" id="form-name" name="name" placeholder="input your name">
+        </label>
+        <label for="form-mobile">
+          <input type="tel" id="form-mobile" name="mobile" placeholder="input your mobile">
+        </label>
+        <input type="checkbox" id="form-agreement"><label for="form-agreement">check this first <a href="/">read this</a></label>
+        <input disabled type="submit" value="Login">
+      </form>
+      <p><a href="#">forget user/password</a></p>
+      <p><a href="#">register</a></p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block js %}
+<script>
+  $(function(){
+    $(".login__form").addClass("login__form_active");
+    $("input[type='checkbox']").change(function(){
+      if($(this).prop('checked') == true){
+        $("input[type='submit']").removeAttr("disabled");
+      }else{
+        $("input[type='submit']").attr("disabled","disabled");
+      }
+    });
+  });
+</script>
+{% endblock %}

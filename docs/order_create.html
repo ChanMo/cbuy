@@ -9,17 +9,20 @@
     <link rel="stylesheet" href="css/app.min.css">
   </head>
   <body>
+
+
+
     
-    <div class="top-bar">
-      <i class="fa fa-car"></i><span>BUY</span>
-    </div>
-    
-    
+<div class="top-bar">
+  <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
+  <span>我的订单</span>
+</div>
+
 <div class="container order-create">
 
   <div class="order-create__item">
     <h5>Commodity</h5>
-    <div>
+    <div class="order-create__content">
       
       <a href="commodity.html" class="commodity-item">
   <div class="commodity-item__cover">
@@ -54,7 +57,7 @@
 
   <div class="order-create__item">
     <h5>Address</h5>
-    <div class="order-create__box">
+    <div class="order-create__content">
       
       <div class="order-create__address order-create__address_active">
         <h6>ChanMo<span>15550000000</span></h6>
@@ -74,64 +77,28 @@
     </div>
   </div>
 
-  <div class="order-create__item">
-    <h5>Use shop?<input type="checkbox" id="use-shop"><label class="float-right" for="use-shop"></label></h5>
-    <div class="order-create__box">
-      
-      <div class="order-create__address order-create__address_active">
-        <h6>FindChen<span>15550000000</span></h6>
-        <p>China, Luoyang</p>
-      </div>
-      
-      <div class="order-create__address ">
-        <h6>FindChen<span>15550000000</span></h6>
-        <p>China, Luoyang</p>
-      </div>
-      
-      <div class="order-create__address ">
-        <h6>FindChen<span>15550000000</span></h6>
-        <p>China, Luoyang</p>
-      </div>
-      
-    </div>
-  </div>
 
   <div class="order-create__item">
     <h5>Price</h5>
-    <p>Price:<span class="float-right">1200</span></p>
-    <p>devialy:<span class="float-right">20</span></p>
-    <p>Price All:<span class="float-right price">1220</span></p>
-  </div>
-
-  <div class="order-create__item text-right">
-    <a href="order_create_success.html">Checkout</a>
+    <div class="order-create__content">
+      <p>Price:<span class="float-right">1200</span></p>
+      <p>devialy:<span class="float-right">20</span></p>
+      <p>Price All:<span class="float-right price">1220</span></p>
+    </div>
   </div>
 </div>
 
-    
-    <div class="bottom-bar">
-      <a href="index.html" class="active">
-        <i class="fa fa-home"></i>
-        <div>home</div>
-      </a>
-      <a href="cart.html">
-        <span>2</span>
-        <i class="fa fa-shopping-cart"></i>
-        <div>shoppingcar</div>
-      </a>
-      <a href="car.html">
-        <i class="fa fa-car"></i>
-        <div>car</div>
-      </a>
-      <a href="me.html">
-        <i class="fa fa-user"></i>
-        <div>user</div>
-      </a>
-    </div>
-    
+
+<div class="order-create-action">
+  <a href="order_create_success.html">确定</a>
+</div>
+
+
+
     <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/juss.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
     <script src="js/app.min.js"></script>
+
     
   </body>
 </html>

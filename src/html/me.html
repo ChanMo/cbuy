@@ -1,22 +1,67 @@
 {% extends "base.html" %}
 {% block main %}
 <div class="container me">
-  <div class="me__header">
-    <img src="https://s-media-cache-ak0.pinimg.com/564x/6f/4a/55/6f4a552fad61070bd3ed5f55a42643f2.jpg">
-    <h6>ChanMo</h6>
-    <span>1969's Camaro</span>
+
+  <div class="me__header" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/4f/a2/78/4fa27877e254fc53c729a6e6a153a7dd.jpg);">
+    <img src="https://s-media-cache-ak0.pinimg.com/564x/8e/90/40/8e904015f86c2a6c02ad6e4301d0ee7c.jpg">
+    <h6>chenmoumou</h6>
   </div>
-  <div class="me__main">
-    <div class="me__main__box">
-      <a href="order.html"><div class="item"><img src="img/me_icon4.png"><span>orders</span></div></a>
-      <a href="address.html"><div class="item"><img src="img/me_icon5.png"><span>address</span></div></a>
-    </div>
-    <div class="me__main__box">
-      <a href="#"><div class="item"><img src="img/me_icon1.png" style="margin-bottom:-5px;"><span>cars</span></div></a>
-      <a href="#"><div class="item"><img src="img/me_icon3.png" style="margin-bottom:-5px;"><span>money</span></div></a>
-      <a href="#"><div class="item"><img src="img/me_icon2.png" style="margin-bottom:-5px;"><span>info</span></div></a>
-    </div>
-    </div>
+
+  <div class="me__item">
+    <h6>All orders<a href="order.html">view all</a></h6>
+    <ul>
+      <li><a href="#"><img src="img/icons/svg/wallet.svg"><span>1</span><p>待付款</p></a></li>
+      <li><a href="#"><img src="img/icons/svg/package.svg"><span>1</span><p>待发货</p></a></li>
+      <li><a href="#"><img src="img/icons/svg/truck.svg"><span>1</span><p>待收获</p></a></li>
+      <li><a href="#"><img src="img/icons/svg/pen.svg"><span>1</span><p>待评价</p></a></li>
+      <li><a href="#"><img src="img/icons/svg/piggy-bank-2.svg"><span>1</span><p>退款/售后</p></a></li>
+    </ul>
+  </div>
+
+  <div class="me__item">
+    <h6>Tools</h6>
+    <table>
+      <tr>
+        <td><a href="#"><img src="img/icons/svg/shop.svg"><p>我的信息</p></a></td>
+        <td><a href="address.html"><img src="img/icons/svg/truck-1.svg"><p>收获地址</p></a></td>
+        <td><a href="#"><img src="img/icons/svg/wallet.svg"><p>我的钱包</p></a></td>
+        <td><a href="#"><img src="img/icons/svg/cash.svg"><p>会员码</p></a></td>
+
+      </tr>
+      <tr>
+        <td><a href="#"><img src="img/icons/svg/headphones.svg"><p>客服</p></a></td>
+        <td><a href="login.html"><img src="img/icons/svg/headphones.svg"><p>登录</p></a></td>
+      </tr>
+    </table>
   </div>
 </div>
+
+
+<div class="bottom-bar">
+  <a href="index.html">
+    <i class="fa fa-home"></i>
+    <div>首页</div>
+  </a>
+  <a href="category_tree.html">
+    <i class="fa fa-th-list"></i>
+    <div>分类</div>
+  </a>
+  <a href="cart.html">
+    <span>2</span>
+    <i class="fa fa-shopping-cart"></i>
+    <div>购物车</div>
+  </a>
+
+  <a href="me.html" class="active">
+    <i class="fa fa-user"></i>
+    <div>我的</div>
+  </a>
+</div>
+{% endblock %}
+{% block js %}
+<script>
+  $(function(){
+    $(".me__header img").addClass("active");
+  });
+</script>
 {% endblock %}

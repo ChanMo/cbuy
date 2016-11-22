@@ -1,0 +1,83 @@
+.me {
+  padding: 0 0 4rem; }
+  .me__header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 2.5rem 0 .5rem;
+    margin-bottom: .5rem; }
+    .me__header img {
+      width: 25vw;
+      height: 25vw;
+      border-radius: 25vw;
+      border: 1px solid white;
+      transform: translate3d(0, -100%, 0);
+      transition: all .5s; }
+    .me__header .active {
+      transform: translate3d(0, 0, 0); }
+    .me__header h6 {
+      color: white;
+      margin: .5rem 0; }
+  .me__item {
+    margin-bottom: .5rem;
+    background: white; }
+    .me__item h6 {
+      margin: 0;
+      padding: 0 .5rem;
+      height: 3rem;
+      line-height: 3rem; }
+      .me__item h6 a {
+        float: right;
+        font-size: 0.9rem;
+        color: grey; }
+        .me__item h6 a:after {
+          content: "\f105";
+          font-family: FontAweSome;
+          margin-left: .5rem; }
+    .me__item ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: normal;
+      border-top: 1px solid #eee; }
+      .me__item ul:after {
+        content: '';
+        display: block;
+        clear: both; }
+      .me__item ul li {
+        display: block;
+        width: 20%;
+        float: left;
+        text-align: center;
+        padding: 1rem 0;
+        position: relative; }
+        .me__item ul li a {
+          color: black; }
+        .me__item ul li img {
+          width: 35%; }
+        .me__item ul li span {
+          position: absolute;
+          display: inline-block;
+          font-size: 0.6rem;
+          width: 0.9rem;
+          height: 0.9rem;
+          border-radius: 0.9rem;
+          background: red;
+          color: white;
+          text-align: center;
+          line-height: 0.9rem; }
+        .me__item ul li p {
+          font-size: 0.8rem;
+          margin: 5px 0 0; }
+    .me__item table {
+      border: none; }
+      .me__item table td {
+        border-color: #eee;
+        text-align: center; }
+        .me__item table td a {
+          color: black;
+          font-size: 0.8rem; }
+          .me__item table td a img {
+            width: 45%; }
+          .me__item table td a p {
+            margin: 5px 0 0; }

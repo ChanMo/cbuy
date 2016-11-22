@@ -1,0 +1,88 @@
+.home {
+  padding: 0 0 4rem; }
+  .home__header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: .5rem 1rem .5rem 0;
+    line-height: 2rem; }
+    .home__header__city {
+      width: 20%;
+      color: white;
+      font-size: 0.85rem;
+      text-align: center; }
+    .home__header form {
+      position: relative;
+      width: 85%; }
+      .home__header form:after {
+        content: '\f002';
+        font-family: FontAwesome;
+        color: white;
+        position: absolute;
+        top: 50%;
+        right: .5rem;
+        transform: translateY(-50%); }
+    .home__header input {
+      width: 100%;
+      margin: 0;
+      border: none;
+      background: rgba(255, 255, 255, 0.6);
+      height: 2rem;
+      border-radius: 10px;
+      line-height: normal; }
+  .home__nav {
+    background: white;
+    padding: .5rem 0; }
+    .home__nav:after {
+      content: '';
+      display: block;
+      clear: both; }
+    .home__nav a {
+      float: left;
+      display: inline-block;
+      width: 20%;
+      text-align: center;
+      font-size: 0.85rem;
+      color: black;
+      padding: .5rem 0; }
+      .home__nav a div {
+        margin: 0 auto;
+        width: 13vw;
+        height: 13vw;
+        line-height: 13vw;
+        text-align: center;
+        border-radius: 10px;
+        background: orange;
+        color: white; }
+    .home__nav img {
+      width: 50%; }
+  .home__item h6 {
+    text-align: center;
+    margin: .5rem 0; }
+  .home__item__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .home__item__container a {
+      display: block;
+      width: 49%;
+      background: white;
+      margin-bottom: .5rem; }
+      .home__item__container a:nth-child(1) {
+        width: 99%;
+        margin-bottom: 2px; }
+      .home__item__container a div {
+        padding: .3rem .5rem; }
+      .home__item__container a p {
+        margin: 0;
+        color: black;
+        font-size: 0.95rem; }
+      .home__item__container a span {
+        font-size: 0.85rem; }
+        .home__item__container a span:before {
+          content: "\f157";
+          font-family: FontAwesome;
+          font-size: 0.75rem; }

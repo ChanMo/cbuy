@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block topbar %}{% endblock %}
+{% block main %}
+<div class="container category-tree">
+  <div class="category-tree__left">
+    <ul>
+    {% for i in range(0,20) %}
+    <li><a href="#">category</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+
+  <div class="category-tree__right">
+    <div class="category-tree__right__header">
+    </div>
+    {% for i in range(0,3) %}
+    <div class="category-tree__right__item">
+      <h6>name</h6>
+      <div class="category-tree__right__content">
+        {% for i in range(0,5) %}
+        <a href="#">
+          <img src="https://s-media-cache-ak0.pinimg.com/564x/c7/3f/54/c73f549249b98c361683677313ba5947.jpg">
+          <p>name</p>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

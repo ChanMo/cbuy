@@ -1,0 +1,113 @@
+.home {
+    padding: 0 0 4rem;
+    &__header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        $size: 2rem;
+        padding: .5rem 1rem .5rem 0;
+        line-height: 2rem;
+        &__city {
+            width: 20%;
+            color: white;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+        form {
+            position: relative;
+            width: 85%;
+            &:after {
+                content: '\f002';
+                font-family: FontAwesome;
+                color: white;
+                position: absolute;
+                top: 50%;
+                right: .5rem;
+                transform: translateY(-50%);
+            }
+        }
+        input {
+            width: 100%;
+            margin: 0;
+            border: none;
+            background: rgba(white, 0.6);
+            height: 2rem;
+            border-radius: 10px;
+            line-height: normal;
+        }
+    }
+    &__slide {
+    }
+    &__nav {
+        background: white;
+        padding: .5rem 0;
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        a {
+            float: left;
+            display: inline-block;
+            width: 20%;
+            text-align: center;
+            font-size: 0.85rem;
+            color: black;
+            padding: .5rem 0;
+            div {
+                margin: 0 auto;
+                $size: 13vw;
+                width: $size;
+                height: $size;
+                line-height: $size;
+                text-align: center;
+                border-radius: 10px;
+                background: orange;
+                color: white;
+            }
+        }
+        img {
+            width: 50%;
+        }
+    }
+    &__item {
+        h6 {
+            text-align: center;
+            margin: .5rem 0;
+        }
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            a {
+                display: block;
+                width: 49%;
+                background: white;
+                margin-bottom: .5rem;
+                &:nth-child(1) {
+                    width: 99%;
+                    margin-bottom: 2px;
+                }
+                div {
+                    padding: .3rem .5rem;
+                }
+                p {
+                    margin: 0;
+                    color: black;
+                    font-size: 0.95rem;
+                }
+                span {
+                    font-size: 0.85rem;
+                    &:before {
+                        content: "\f157";
+                        font-family: FontAwesome;
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -37,12 +37,12 @@ $color: (
 );
 
 // Base palette
-$primary-color: #bb62e0;
+$primary-color: #FFA530;
 $secondary-color: map-get($color, 'dark-grey');
 $success-color: map-get($color, 'aqua');
 $warning-color: map-get($color, 'deep-orange');
 $palette: (
-    primary: #bb62e0,
+    primary: #FFA530,
     secondary: map-get($color, 'dark-grey'),
     success: map-get($color, 'aqua'),
     warning: map-get($color, 'deep-orange'),

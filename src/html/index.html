@@ -1,30 +1,77 @@
 {% extends "base.html" %}
-{% block topbar %}{% endblock %}
 {% block main %}
 <div class="container home">
   <div class="home__header">
-    <img src="img/home_header.png">
+    <div class="home__header__city">济南</div>
+    <form>
+      <input type="search" placeholder="search">
+    </form>
   </div>
-  <div class="home__main">
 
-    <a href="category.html">
-      <img src="img/home_icon1.png">
-      <div>Buy</div>
-    </a>
-    <a href="shop_main.html">
-      <img src="img/home_icon2.png">
-      <div>Shop</div>
-    </a>
-    <a href="register.html">
-      <img src="img/home_icon3.png">
-      <div>Register</div>
-    </a>
 
-    <a href="shop_list.html">
-      <img src="img/home_icon4.png">
-      <div>Shop List</div>
-    </a>
-
+  <div class="home__slide">
+    <div class="slide" style="height:30vh;">
+      <ul class="slide__main">
+        <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/d2/39/38/d23938218aa1bea612b4679b93ae082e.jpg);"></a></li>
+        <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/d4/c3/a3/d4c3a342332ff8f046c91e327512e1a6.jpg);"></a></li>
+        <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/236x/ec/e4/53/ece453552a581f88e9c17e7b21bfa025.jpg);"></a></li>
+      </ul>
+      <ul class="slide__nav">
+        {% for i in range(0,3) %}
+        <li {% if i==0 %} class="active" {% endif %}><a href="#"></a></li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
+
+  <div class="home__nav">
+    {% for i in ['#759a85','#FA8D02','#71B4C4','#A47670','#5C4460'] %}
+    <a href="#"><div style="background:{{ i }}"><i class="fa fa-user"></i></div><span>name</span></a>
+    {% endfor %}
+  </div>
+
+
+  {% for i in range(0,3) %}
+  <div class="home__item">
+    <h6>新品推荐</h6>
+    <div class="home__item__container">
+      <a href="#"><img src="img/banners/banner{{ i+1 }}.jpg"></a>
+      {% for i in range(0,4) %}
+      <a class="home__item__commodity" href="commodity.html">
+        <img src="https://s-media-cache-ak0.pinimg.com/564x/7f/7a/20/7f7a2034db17f8d88abf98bd5165d179.jpg">
+        <div>
+          <p>something</p>
+          <span class="price">1200</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+
+
+</div>
+
+<a href="#" class="scroll-to-top hide"><i class="fa fa-arrow-up"></i></a>
+
+<div class="bottom-bar">
+  <a href="index.html" class="active">
+    <i class="fa fa-home"></i>
+    <div>首页</div>
+  </a>
+  <a href="category_tree.html">
+    <i class="fa fa-th-list"></i>
+    <div>分类</div>
+  </a>
+  <a href="cart.html">
+    <span>2</span>
+    <i class="fa fa-shopping-cart"></i>
+    <div>购物车</div>
+  </a>
+
+  <a href="me.html">
+    <i class="fa fa-user"></i>
+    <div>我的</div>
+  </a>
 </div>
 {% endblock %}

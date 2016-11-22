@@ -1,13 +1,33 @@
 {% extends "base.html" %}
 {% block main %}
+<div class="top-bar">
+  <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
+</div>
+
+
 <div class="container commodity">
+
   <div class="commodity__header">
-    <img src="https://s-media-cache-ak0.pinimg.com/564x/3a/52/0e/3a520efe2727038fa19a725a661796e6.jpg">
+    <div class="slide" style="height:30vh;">
+      <ul class="slide__main">
+        <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/d2/39/38/d23938218aa1bea612b4679b93ae082e.jpg);"></a></li>
+        <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/d4/c3/a3/d4c3a342332ff8f046c91e327512e1a6.jpg);"></a></li>
+        <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/236x/ec/e4/53/ece453552a581f88e9c17e7b21bfa025.jpg);"></a></li>
+      </ul>
+      <ul class="slide__nav">
+        {% for i in range(0,3) %}
+        <li {% if i==0 %} class="active" {% endif %}><a href="#"></a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
     <div class="commodity__title">
       <p>69's Camaro</p>
       <span class="price"><i class="fa fa-rmb" style="font-size:0.6rem"></i>1200</span>
     </div>
   </div>
+
+
   <div class="commodity__param">
     <div class="commodity__param__item">
       <h6>Color:</h6>
@@ -31,17 +51,17 @@
       <h6>Delivery:</h6>
     </div>
   </div>
+
+
   <div class="commodity__intro">
     <h5>Intro</h5>
     <img src="https://s-media-cache-ak0.pinimg.com/564x/03/85/83/0385836471cb888c8a2771039513d17f.jpg">
   </div>
 </div>
 
-<a href="#" class="buy-now">
-  <i class="fa fa-arrow-right"></i>
-</a>
-<a href="cart.html" class="cart-add">
-  <i class="fa fa-cart-plus"></i>
-</a>
-
+<div class="commodity-action">
+  <a href="javascript:;"><i class="fa fa-star-o"></i></a>
+  <a href="order_create.html" class="float-right">购买&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
+  <a href="#" class="float-right">加入购物车&nbsp;&nbsp;</a>
+</div>
 {% endblock %}

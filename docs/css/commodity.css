@@ -1,0 +1,50 @@
+.commodity {
+  padding-bottom: 3.5rem; }
+  .commodity__header {
+    margin-bottom: .5rem;
+    background: white; }
+  .commodity__title {
+    padding: 0.5rem; }
+    .commodity__title p {
+      margin: 0; }
+  .commodity__param {
+    margin-bottom: .5rem;
+    padding: .5rem;
+    background: white; }
+    .commodity__param__item {
+      padding: .5rem 0;
+      border-bottom: 1px dashed #efefef; }
+      .commodity__param__item h6 {
+        margin: 0;
+        font-weight: 0; }
+    .commodity__param ul {
+      margin: .5rem 0 0;
+      padding: 0; }
+    .commodity__param li {
+      display: inline-block; }
+    .commodity__param li a {
+      padding: .3rem 1rem;
+      border-radius: .5rem;
+      background: lightgrey;
+      color: rgba(0, 0, 0, 0.6); }
+    .commodity__param .active a {
+      background: #FFA530;
+      color: white; }
+  .commodity__intro {
+    background: white; }
+    .commodity__intro img {
+      max-width: 100%;
+      height: auto !important; }
+
+.commodity-action {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  padding: 0 1rem;
+  background: white;
+  border-top: 1px solid #eee; }
+  .commodity-action a {
+    color: black; }

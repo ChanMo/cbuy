@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block main %}
+
+<div class="top-bar">
+  <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
+  <span>title</span>
+</div>
+
+
+<div class="container category-tree">
+  <div class="category-tree__left">
+    <ul>
+    {% for i in range(0,30) %}
+    <li {% if loop.first %} class="active" {% endif %}><a href="#">category</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+
+  <div class="category-tree__right">
+    <a class="category-tree__right__header" href="list.html">
+      <img src="https://s-media-cache-ak0.pinimg.com/564x/82/cc/9e/82cc9e5d384e7a6c8fbe899239a61c9a.jpg">
+    </a>
+    {% for i in range(0,3) %}
+    <div class="category-tree__right__item">
+      <h6>name</h6>
+      <div class="category-tree__right__content">
+        {% for i in range(0,5) %}
+        <a href="list.html">
+          <img src="https://s-media-cache-ak0.pinimg.com/564x/c7/3f/54/c73f549249b98c361683677313ba5947.jpg">
+          <p>name</p>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script>
+  $(function(){
+    $(".category-tree__left a").on("click", function(e){
+      e.preventDefault();
+      $(this).parent("li").addClass("active");
+      $(this).parent("li").siblings("li").removeClass("active");
+    });
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,71 @@
+.login {
+  padding: 0;
+  height: 100vh;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/564x/4e/71/42/4e71421317cfeb0df9f460ce17f9a533.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+  .login__main {
+    height: 100%;
+    padding: 1rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), red);
+    position: relative; }
+  .login__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, 0%);
+    transition: all .5s;
+    width: 90%;
+    text-align: center; }
+    .login__form input:not([type='submit']) {
+      background: none;
+      border: none;
+      border-bottom: 2px solid black; }
+    .login__form label {
+      position: relative;
+      display: block; }
+    .login__form label input {
+      padding-left: 2rem; }
+    .login__form label:before {
+      content: "";
+      font-family: FontAwesome;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 2rem;
+      text-align: center;
+      transform: translateY(-50%); }
+    .login__form label[for='form-name']:before {
+      content: "\f007"; }
+    .login__form label[for='form-mobile']:before {
+      content: "\f095"; }
+    .login__form label[for='form-password']:before {
+      content: "\f084"; }
+    .login__form label[for='form-agreement'] {
+      padding-left: 2rem;
+      text-align: left;
+      font-size: 0.85rem; }
+      .login__form label[for='form-agreement']:before {
+        content: "\f096";
+        color: black; }
+    .login__form input[type='checkbox']:checked + label:before {
+      content: "\f14a";
+      color: black; }
+    .login__form input[type='submit'] {
+      display: block;
+      width: 100%;
+      padding: .5rem 0;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 0;
+      margin: 1.5rem 0 1rem; }
+    .login__form p {
+      margin: 0; }
+    .login__form a {
+      color: black; }
+  .login__form_active {
+    opacity: 1;
+    transform: translate(-50%, -40%); }

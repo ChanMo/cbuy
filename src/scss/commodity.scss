@@ -1,0 +1,68 @@
+.commodity {
+    padding-bottom: 3.5rem;
+    &__header {
+        margin-bottom: .5rem;
+        background: white;
+    }
+    &__title {
+        padding: 0.5rem;
+        p {
+            margin: 0;
+        }
+    }
+
+    &__param {
+        margin-bottom: .5rem;
+        padding: .5rem;
+        background: white;
+        &__item {
+            padding: .5rem 0;
+            border-bottom: 1px dashed #efefef;
+            h6 {
+                margin: 0;
+                font-weight: 0;
+            }
+        }
+        ul {
+            margin: .5rem 0 0;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+        }
+        li a {
+            padding: .3rem 1rem;
+            border-radius: .5rem;
+            background: lightgrey;
+            color: rgba(black, 0.6);
+        }
+        .active a {
+            background: #FFA530;
+            color: white;
+        }
+    }
+
+    &__intro {
+        background: white;
+        img {
+            max-width: 100%;
+            height: auto !important;
+        }
+    }
+}
+
+.commodity-action {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    $size: 3.5rem;
+    height: $size;
+    line-height: $size;
+    padding: 0 1rem;
+    background: white;
+    border-top: 1px solid #eee;
+    a {
+        color: black;
+    }
+}

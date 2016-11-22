@@ -1,0 +1,122 @@
+$primary-color: #FFA530;
+.order-create {
+    padding: .5rem .5rem 3.5rem;
+    p {
+        margin: 0;
+        font-size: 0.85rem;
+    }
+
+    &__item {
+        background: white;
+        margin-bottom: .5rem;
+        //padding: .5rem;
+    }
+
+    h5 {
+        margin: 0;
+        padding: .5rem;
+        border-bottom: 1px solid #efefef;
+        a {
+            color: darkgrey;
+            float: right;
+        }
+    }
+    &__content {
+        padding: .5rem;
+    }
+
+    .commodity-item:not(:last-child) {
+        border-bottom: 1px dashed #efefef;
+    }
+
+    &__address {
+        padding: .5rem .5rem .5rem 2rem;
+        box-sizing: border-box;
+        position: relative;
+        &:not(:last-child){
+            border-bottom: 1px solid #efefef;
+        }
+        h6 {
+            margin-bottom: .3rem;
+        }
+        span {
+            float: right;
+        }
+        p {
+            color: darkgrey;
+        }
+        &:before {
+            content: "\f041";
+            font-family: 'FontAwesome';
+            color: $primary-color;
+            position: absolute;
+            top: 50%;
+            left: .5rem;
+            opacity: 0;
+            transition: all .5s;
+        }
+    }
+    &__address_active {
+        &:before {
+            content: "\f041";
+            font-family: FontAwesome;
+            color: $primary-color;
+            position: absolute;
+            top: 50%;
+            left: .5rem;
+            transform: translateY(-50%);
+            opacity: 1;
+        }
+    }
+
+    &__shop {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            a {
+                display: block;
+                padding: .5rem 1rem;
+                border-bottom: 1px dashed #eee;
+                color: grey;
+            }
+        }
+        &_active {
+            a {
+                color: $primary-color !important;
+            }
+        }
+    }
+}
+
+
+.order-create-success {
+    &__main {
+        margin: 2rem auto;
+        width: 80%;
+        background: white;
+        padding: .5rem 1rem;
+    }
+}
+
+
+.order-create-action {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-align: right;
+    padding: 0 1rem;
+    background: white;
+    border-top: 1px solid #eee;
+    a {
+        color: black;
+        &:after {
+            content: '\f061';
+            font-family: FontAwesome;
+            margin-left: .5rem;
+        }
+    }
+}

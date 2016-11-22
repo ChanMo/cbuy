@@ -445,10 +445,10 @@ small {
   color: darkend(inherit, 80%); }
 
 a {
-  color: #bb62e0;
+  color: #FFA530;
   text-decoration: none; }
   a:hover {
-    color: #9d28cd;
+    color: #e38000;
     text-decoration: underline; }
 
 ol,
@@ -543,7 +543,7 @@ textarea {
   select:focus,
   textarea:focus {
     outline: 0;
-    border-color: #bb62e0; }
+    border-color: #FFA530; }
   input[type="text"][disabled],
   input[type="password"][disabled],
   input[type="email"][disabled],
@@ -1054,16 +1054,16 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   margin: 0 0 1rem;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  background: #bb62e0;
+  background: #FFA530;
   color: white; }
   [data-whatinput='mouse'] .button {
     outline: 0; }
   .button:hover {
-    background: #a937d8; }
+    background: #fc8e00; }
   .button + .button_color_primary {
-    background: #bb62e0; }
+    background: #FFA530; }
     .button + .button_color_primary:hover {
-      background: #a937d8; }
+      background: #fc8e00; }
   .button + .button_color_secondary {
     background: #616161; }
     .button + .button_color_secondary:hover {
@@ -1078,17 +1078,17 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
       background: #ee3900; }
   .button_hollow {
     background: transparent;
-    color: #bb62e0;
-    border: 1px solid #bb62e0; }
+    color: #FFA530;
+    border: 1px solid #FFA530; }
     .button_hollow:hover {
-      background: #bb62e0;
+      background: #FFA530;
       color: white; }
     .button_hollow + .button_color_primary {
       background: transparent;
-      color: #bb62e0;
-      border-color: #bb62e0; }
+      color: #FFA530;
+      border-color: #FFA530; }
       .button_hollow + .button_color_primary:hover {
-        background: #bb62e0;
+        background: #FFA530;
         color: white; }
     .button_hollow + .button_color_secondary {
       background: transparent;
@@ -1123,10 +1123,10 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
 
 /** .text-* and .bg-* **/
 .text-primary {
-  color: #bb62e0; }
+  color: #FFA530; }
 
 .bg-primary {
-  background: #bb62e0; }
+  background: #FFA530; }
 
 .text-secondary {
   color: #616161; }
@@ -1341,9 +1341,9 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
     border: 1px solid #f1f1f1;
     color: #616161; }
   .pagination .active a {
-    background: #bb62e0;
+    background: #FFA530;
     color: white;
     cursor: not-allowed; }
   .pagination li:not(.active):hover a {
-    background: #bb62e0;
+    background: #FFA530;
     color: white; }

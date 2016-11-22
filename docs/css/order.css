@@ -1,0 +1,103 @@
+.order {
+  padding-bottom: 3.5rem; }
+  .order__nav ul {
+    display: flex;
+    justify-content: center;
+    background: white; }
+  .order__nav li {
+    display: block;
+    width: 19vw;
+    text-align: center;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border-bottom: 2px solid transparent; }
+  .order__nav a {
+    padding: 0;
+    font-size: 0.85rem;
+    color: darkgrey; }
+  .order__nav .active {
+    border-color: #FFA530; }
+    .order__nav .active a {
+      color: #FFA530; }
+  .order__main {
+    padding: 0 .5rem; }
+  .order__item {
+    background: white;
+    margin-bottom: .5rem;
+    padding: 0 .5rem; }
+    .order__item__header {
+      display: block;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      font-size: 0.85rem;
+      border-bottom: 1px dashed lightgrey;
+      color: #333; }
+    .order__item__main {
+      display: flex;
+      border-bottom: 1px dashed lightgrey;
+      color: #333; }
+    .order__item__cover {
+      width: 30%; }
+    .order__item__title {
+      width: 70%;
+      padding: 0 .5rem .5rem; }
+      .order__item__title p {
+        margin: 0; }
+      .order__item__title span {
+        font-size: 0.85rem;
+        color: darkgrey; }
+    .order__item__action {
+      text-align: right;
+      padding: .5rem; }
+      .order__item__action .button {
+        margin: 0; }
+
+.order-detail {
+  padding: .5rem .5rem 3.5rem; }
+  .order-detail__header {
+    padding: 0 .5rem;
+    background: white;
+    border-bottom: 1px solid lightgrey; }
+    .order-detail__header h6 {
+      height: 2.5rem;
+      line-height: 2.5rem;
+      margin: 0; }
+      .order-detail__header h6 span {
+        font-size: 0.85rem;
+        color: darkgrey; }
+  .order-detail__commodity {
+    background: white;
+    padding: .5rem 1rem;
+    border-bottom: 1px solid lightgrey; }
+    .order-detail__commodity a {
+      display: flex;
+      border-bottom: 1px dashed lightgrey;
+      padding: .5rem 0; }
+      .order-detail__commodity a:last-child {
+        border-bottom: none; }
+      .order-detail__commodity a .cover {
+        width: 30vw;
+        height: 30vw; }
+        .order-detail__commodity a .cover img {
+          width: 100%; }
+      .order-detail__commodity a .title {
+        width: calc(100% - 30vw);
+        padding-left: 1rem;
+        box-sizing: border-box; }
+        .order-detail__commodity a .title p {
+          margin: 0;
+          color: black; }
+        .order-detail__commodity a .title span {
+          color: darkgrey;
+          font-size: 0.85rem; }
+  .order-detail__main {
+    background: white;
+    padding: 1rem;
+    border-bottom: 1px solid lightgrey; }
+    .order-detail__main p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: darkgrey; }
+  .order-detail__action {
+    background: white;
+    padding: .5rem; }
