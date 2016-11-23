@@ -28,7 +28,10 @@
     width: 70%;
     max-height: 100%;
     overflow: scroll;
-    padding: .5rem; }
+    padding: .5rem;
+    display: none; }
+    .category-tree__right:nth-child(2) {
+      display: block; }
     .category-tree__right__header {
       margin-bottom: .5rem; }
     .category-tree__right__item h6 {

@@ -159,14 +159,20 @@
                     border-left: 1px solid lightgrey;
                     border-right: 1px solid lightgrey;
                     display: inline-block;
-                    padding: 0 .5rem;
                     box-sizing: border-box;
                     font-size: 0.85rem;
+                    overflow: hidden;
+                    max-height: 100%;
+                    float: left;
+                    width: 2rem;
+                    text-align: center;
                 }
                 i {
+                    float: left;
                     display: inline-block;
-                    box-sizing: border-box;
-                    padding: 0 .3rem;
+                    width: 1.5rem;
+                    text-align: center;
+                    font-style: normal;
                 }
             }
         }

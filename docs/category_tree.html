@@ -48,7 +48,7 @@
   </div>
 
   
-  <div class="category-tree__right ">
+  <div class="category-tree__right">
     <a class="category-tree__right__header" href="list.html">
       <img src="https://s-media-cache-ak0.pinimg.com/564x/82/cc/9e/82cc9e5d384e7a6c8fbe899239a61c9a.jpg">
     </a>
@@ -151,7 +151,7 @@
     
   </div>
   
-  <div class="category-tree__right hide">
+  <div class="category-tree__right">
     <a class="category-tree__right__header" href="list.html">
       <img src="https://s-media-cache-ak0.pinimg.com/564x/82/cc/9e/82cc9e5d384e7a6c8fbe899239a61c9a.jpg">
     </a>
@@ -254,7 +254,7 @@
     
   </div>
   
-  <div class="category-tree__right hide">
+  <div class="category-tree__right">
     <a class="category-tree__right__header" href="list.html">
       <img src="https://s-media-cache-ak0.pinimg.com/564x/82/cc/9e/82cc9e5d384e7a6c8fbe899239a61c9a.jpg">
     </a>
@@ -357,7 +357,7 @@
     
   </div>
   
-  <div class="category-tree__right hide">
+  <div class="category-tree__right">
     <a class="category-tree__right__header" href="list.html">
       <img src="https://s-media-cache-ak0.pinimg.com/564x/82/cc/9e/82cc9e5d384e7a6c8fbe899239a61c9a.jpg">
     </a>
@@ -460,7 +460,7 @@
     
   </div>
   
-  <div class="category-tree__right hide">
+  <div class="category-tree__right">
     <a class="category-tree__right__header" href="list.html">
       <img src="https://s-media-cache-ak0.pinimg.com/564x/82/cc/9e/82cc9e5d384e7a6c8fbe899239a61c9a.jpg">
     </a>
@@ -563,7 +563,7 @@
     
   </div>
   
-  <div class="category-tree__right hide">
+  <div class="category-tree__right">
     <a class="category-tree__right__header" href="list.html">
       <img src="https://s-media-cache-ak0.pinimg.com/564x/82/cc/9e/82cc9e5d384e7a6c8fbe899239a61c9a.jpg">
     </a>
@@ -666,7 +666,7 @@
     
   </div>
   
-  <div class="category-tree__right hide">
+  <div class="category-tree__right">
     <a class="category-tree__right__header" href="list.html">
       <img src="https://s-media-cache-ak0.pinimg.com/564x/82/cc/9e/82cc9e5d384e7a6c8fbe899239a61c9a.jpg">
     </a>
@@ -769,7 +769,7 @@
     
   </div>
   
-  <div class="category-tree__right hide">
+  <div class="category-tree__right">
     <a class="category-tree__right__header" href="list.html">
       <img src="https://s-media-cache-ak0.pinimg.com/564x/82/cc/9e/82cc9e5d384e7a6c8fbe899239a61c9a.jpg">
     </a>
@@ -872,7 +872,7 @@
     
   </div>
   
-  <div class="category-tree__right hide">
+  <div class="category-tree__right">
     <a class="category-tree__right__header" href="list.html">
       <img src="https://s-media-cache-ak0.pinimg.com/564x/82/cc/9e/82cc9e5d384e7a6c8fbe899239a61c9a.jpg">
     </a>
@@ -975,7 +975,7 @@
     
   </div>
   
-  <div class="category-tree__right hide">
+  <div class="category-tree__right">
     <a class="category-tree__right__header" href="list.html">
       <img src="https://s-media-cache-ak0.pinimg.com/564x/82/cc/9e/82cc9e5d384e7a6c8fbe899239a61c9a.jpg">
     </a>
@@ -1095,7 +1095,7 @@
       $(this).parent("li").siblings("li").removeClass("active");
       var index = $(this).parent("li").index();
       $(".category-tree__right").eq(index).show();
-      $(".category-tree__right").neq(index).hide();
+      $(".category-tree__right:not(:eq("+index+"))").hide();
     });
   });
 </script>

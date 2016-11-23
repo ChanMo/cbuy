@@ -36,6 +36,10 @@
         max-height: 100%;
         overflow: scroll;
         padding: .5rem;
+        display: none;
+        &:nth-child(2) {
+            display: block;
+        }
         &__header {
             margin-bottom: .5rem;
         }

@@ -1702,7 +1702,10 @@ div {
     width: 70%;
     max-height: 100%;
     overflow: scroll;
-    padding: .5rem; }
+    padding: .5rem;
+    display: none; }
+    .category-tree__right:nth-child(2) {
+      display: block; }
     .category-tree__right__header {
       margin-bottom: .5rem; }
     .category-tree__right__item h6 {
@@ -2071,13 +2074,19 @@ div {
           border-left: 1px solid lightgrey;
           border-right: 1px solid lightgrey;
           display: inline-block;
-          padding: 0 .5rem;
           box-sizing: border-box;
-          font-size: 0.85rem; }
+          font-size: 0.85rem;
+          overflow: hidden;
+          max-height: 100%;
+          float: left;
+          width: 2rem;
+          text-align: center; }
         .commodity-select__param h6 div i {
+          float: left;
           display: inline-block;
-          box-sizing: border-box;
-          padding: 0 .3rem; }
+          width: 1.5rem;
+          text-align: center;
+          font-style: normal; }
     .commodity-select__param ul {
       margin: 0;
       padding: 0;
