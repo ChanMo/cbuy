@@ -2027,7 +2027,7 @@ div {
   left: 0;
   width: 100%;
   background: white;
-  transform: translateY(110%);
+  transform: translateY(120%);
   transition: all 0.5; }
   .commodity-select .fa-remove {
     color: #333; }

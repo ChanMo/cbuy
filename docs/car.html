@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="zh-hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>CBuy</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.min.css">
+  </head>
+  <body>
+
+
+
+    
+<div class="container car">
+  
+  <div class="car__item">
+    <img class="car__item_bg" src="http://www.carlogos.org/logo/Lamborghini-logo-1920x1080.png">
+    <div class="car__box">
+      <h5>Audi a6<small>default</small></h5>
+      <p>something...</p>
+    </div>
+    <div class="car__action_bg"></div>
+    <div class="car__action">
+      <a href="#"><i class="fa fa-check"></i></a>
+      <a href="car_brand.html"><i class="fa fa-edit"></i></a>
+      <a href="#"><i class="fa fa-trash"></i></a>
+    </div>
+  </div>
+  
+  <div class="car__item">
+    <img class="car__item_bg" src="http://www.carlogos.org/logo/Lamborghini-logo-1920x1080.png">
+    <div class="car__box">
+      <h5>Audi a6<small>default</small></h5>
+      <p>something...</p>
+    </div>
+    <div class="car__action_bg"></div>
+    <div class="car__action">
+      <a href="#"><i class="fa fa-check"></i></a>
+      <a href="car_brand.html"><i class="fa fa-edit"></i></a>
+      <a href="#"><i class="fa fa-trash"></i></a>
+    </div>
+  </div>
+  
+  <a href="car_brand.html" class="button button_size_full">create new</a>
+</div>
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <script src="js/app.min.js"></script>
+
+    
+<script>
+  $(function(){
+    $(".car__box").bind("click", function(e){
+      e.preventDefault();
+      $(this).siblings(".car__action").show();
+      $(this).parent(".car__item").addClass("car__item_active");
+      $(this).parent(".car__item").siblings(".car__item").removeClass("car__item_active");
+    });
+    $(".car__action_bg").bind("click", function(e){
+      e.preventDefault();
+      $(this).parent(".car__item").removeClass("car__item_active");
+
+      window.setTimeout(function(){
+        //$(this).siblings(".car__action").hide();
+      }, 400);
+    });
+  });
+</script>
+
+  </body>
+</html>
