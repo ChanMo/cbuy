@@ -77,7 +77,8 @@ $(".zone-picker__main").on("click", "a", function(e){
     var value = '';
     var parents = nav.prevAll();
     parents.each(function(){
-      value += $(this).find("a").html();
+      //value += $(this).find("a").html();
+      value = $(this).find("a").html() + value;
     });
     value += $(this).html();
 
