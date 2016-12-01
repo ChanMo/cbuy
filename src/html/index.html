@@ -25,8 +25,8 @@
   </div>
 
   <div class="home__nav">
-    {% for item in [{name:'分类',color:'#759a85'},{name:'购物车',color:'#FA8D02'},{name:'订单',color:'#71B4C4'},{name:'地址',color:'#A47670'},{name:'我',color:'#5C4460'}] %}
-    <a href="#"><div style="background:{{ item.color }}"><i class="fa fa-user"></i></div><span>{{ item.name }}</span></a>
+    {% for item in [{name:'分类',color:'#0fbbeb',icon:'list'},{name:'购物车',color:'#23bfb1',icon:'shopping-cart'},{name:'订单',color:'#a887e2',icon:'th-list'},{name:'地址',color:'#ed77a9',icon:'map'},{name:'我',color:'#f9bb54',icon:'user'}] %}
+    <a href="#"><div style="background:{{ item.color }}"><i class="fa fa-{{ item.icon }}"></i></div><span>{{ item.name }}</span></a>
     {% endfor %}
   </div>
 
@@ -40,7 +40,7 @@
       <a class="home__item__commodity" href="commodity.html">
         <img src="https://s-media-cache-ak0.pinimg.com/564x/7f/7a/20/7f7a2034db17f8d88abf98bd5165d179.jpg">
         <div>
-          <p>草莓蛋糕</p>
+          <p>商品名</p>
           <span class="price">1200</span>
         </div>
       </a>

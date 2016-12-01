@@ -3,7 +3,7 @@
 
 <div class="top-bar">
   <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
-  <span>我的订单</span>
+  <span>收获地址</span>
 </div>
 
 
@@ -11,19 +11,19 @@
   {% for i in range(0,2) %}
   <div class="address__item">
     <div class="address__header">
-      <h6>Someone<span class="float-right">15550000000</span></h6>
-      <p>China, Luoyang</p>
+      <h6>姓名<span class="float-right">15550000000</span></h6>
+      <p>山东济南高新区</p>
     </div>
     <div class="address__action">
-      <input name="default" type="radio" id="radio_{{ i }}"><label for="radio_{{ i }}">set default</label>
+      <input name="default" type="radio" id="radio_{{ i }}"><label for="radio_{{ i }}">设为默认</label>
       <div class="float-right">
-        <a href="address_form.html"><i class="fa fa-edit"></i>Edit</a>
-        <a href="#"><i class="fa fa-trash"></i>Delete</a>
+        <a href="address_form.html"><i class="fa fa-edit"></i>编辑</a>
+        <a href="#"><i class="fa fa-trash"></i>删除</a>
       </div>
     </div>
   </div>
   {% endfor %}
 
-  <a href="address_form.html" class="button button_size_full">add new</a>
+  <a href="address_form.html" class="button button_size_full">添加</a>
 </div>
 {% endblock %}
