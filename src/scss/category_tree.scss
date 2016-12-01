@@ -17,6 +17,7 @@
                 border-bottom: 1px solid #eee;
                 background: white;
                 a {
+                    font-size: 0.9rem;
                     color: black;
                     &:hover {
                         text-decoration: none;
@@ -42,6 +43,10 @@
         }
         &__header {
             margin-bottom: .5rem;
+            img {
+              width: 100%;
+              height: 120px;
+            }
         }
         &__item {
             h6 {
@@ -69,6 +74,7 @@
                 }
                 p {
                     text-align: center;
+                    font-size: 0.85rem;
                 }
             }
         }

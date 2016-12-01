@@ -17,6 +17,7 @@
         border-bottom: 1px solid #eee;
         background: white; }
         .category-tree__left ul li a {
+          font-size: 0.9rem;
           color: black; }
           .category-tree__left ul li a:hover {
             text-decoration: none; }
@@ -34,6 +35,9 @@
       display: block; }
     .category-tree__right__header {
       margin-bottom: .5rem; }
+      .category-tree__right__header img {
+        width: 100%;
+        height: 120px; }
     .category-tree__right__item h6 {
       margin: .5rem 0;
       padding-left: .2rem; }
@@ -53,4 +57,5 @@
         .category-tree__right__content a:hover {
           text-decoration: none; }
         .category-tree__right__content a p {
-          text-align: center; }
+          text-align: center;
+          font-size: 0.85rem; }

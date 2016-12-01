@@ -4,7 +4,7 @@
   <div class="home__header">
     <div class="home__header__city">济南</div>
     <form>
-      <input type="search" placeholder="search">
+      <input type="search" placeholder="输入商品名">
     </form>
   </div>
 
@@ -12,7 +12,7 @@
   <div class="home__slide">
     <div class="slide" style="height:30vh;">
       <ul class="slide__main">
-        <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/d2/39/38/d23938218aa1bea612b4679b93ae082e.jpg);"></a></li>
+        <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/236x/a4/ae/97/a4ae97e7090e5c9c6d6b69304c9aea78.jpg);"></a></li>
         <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/d4/c3/a3/d4c3a342332ff8f046c91e327512e1a6.jpg);"></a></li>
         <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/236x/ec/e4/53/ece453552a581f88e9c17e7b21bfa025.jpg);"></a></li>
       </ul>
@@ -25,8 +25,8 @@
   </div>
 
   <div class="home__nav">
-    {% for i in ['#759a85','#FA8D02','#71B4C4','#A47670','#5C4460'] %}
-    <a href="#"><div style="background:{{ i }}"><i class="fa fa-user"></i></div><span>name</span></a>
+    {% for item in [{name:'分类',color:'#759a85'},{name:'购物车',color:'#FA8D02'},{name:'订单',color:'#71B4C4'},{name:'地址',color:'#A47670'},{name:'我',color:'#5C4460'}] %}
+    <a href="#"><div style="background:{{ item.color }}"><i class="fa fa-user"></i></div><span>{{ item.name }}</span></a>
     {% endfor %}
   </div>
 
@@ -40,7 +40,7 @@
       <a class="home__item__commodity" href="commodity.html">
         <img src="https://s-media-cache-ak0.pinimg.com/564x/7f/7a/20/7f7a2034db17f8d88abf98bd5165d179.jpg">
         <div>
-          <p>something</p>
+          <p>草莓蛋糕</p>
           <span class="price">1200</span>
         </div>
       </a>
