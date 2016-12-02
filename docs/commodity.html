@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="no-js" lang="zh-hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>CBuy</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.min.css">
+  </head>
+  <body>
+
+
+
+    
+<div class="top-bar commodity-topbar">
+  <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
+</div>
+
+<div class="container commodity">
+
+  <div class="commodity__header">
+    <div class="slide" style="height:50vh;">
+      <ul class="slide__main">
+        <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/d2/39/38/d23938218aa1bea612b4679b93ae082e.jpg);"></a></li>
+        <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/d4/c3/a3/d4c3a342332ff8f046c91e327512e1a6.jpg);"></a></li>
+        <li><a href="#" style="background-image:url(https://s-media-cache-ak0.pinimg.com/236x/ec/e4/53/ece453552a581f88e9c17e7b21bfa025.jpg);"></a></li>
+      </ul>
+      <ul class="slide__nav">
+        
+        <li  class="active" ><a href="#"></a></li>
+        
+        <li ><a href="#"></a></li>
+        
+        <li ><a href="#"></a></li>
+        
+      </ul>
+    </div>
+
+    <div class="commodity__title">
+      <p>69's Camaro</p>
+      <span class="price"><i class="fa fa-rmb" style="font-size:0.6rem"></i>1200</span>
+    </div>
+  </div>
+
+  <div class="commodity__param">
+    <div class="commodity__param__item">
+      <span class="float-right">黑/白</span>
+      <h6>颜色:</h6>
+    </div>
+    <div class="commodity__param__item">
+      <span class="float-right">175/180</span>
+      <h6>尺寸:</h6>
+    </div>
+    <div class="commodity__param__item">
+      <span class="price float-right">12.00</span>
+      <h6>运费:</h6>
+    </div>
+  </div>
+
+
+  <div class="commodity__intro">
+    <h5>详情</h5>
+    <img src="https://s-media-cache-ak0.pinimg.com/564x/03/85/83/0385836471cb888c8a2771039513d17f.jpg">
+  </div>
+</div>
+
+<div class="commodity-action">
+  <a href="javascript:;" class="commodity-action__collect"><i class="fa fa-star-o"></i><span>收藏</span></a>
+  <a href="order_create.html" data-select-toggle class="commodity-action__buy"><span>购买</span><i class="fa fa-arrow-right"></i></a>
+</div>
+
+
+<div class="commodity-select_bg" data-select-toggle></div>
+<div class="commodity-select">
+  <div class="commodity-select__header">
+    <a href="#" data-select-toggle class="float-right"><i class="fa fa-remove"></i></a>
+    <div>
+      <p><span class="price">1200</span></p>
+      <p>param:</p>
+    </div>
+    <img src="https://s-media-cache-ak0.pinimg.com/564x/f7/78/4f/f7784f36ed59f89f17b375b063fa3932.jpg">
+  </div>
+  <div class="commodity-select__param">
+    <h6>color</h6>
+    <ul>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+      <li><a href="#">somecolor</a></li>
+      
+    </ul>
+    <h6>count
+      <div>
+        <i>-</i>
+        <span>1</span>
+        <i>+</i>
+      </div>
+    </h6>
+
+  </div>
+  <div class="commodity-select__action">
+    <a href="#">add</a>
+    <a href="#">buy</a>
+  </div>
+</div>
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <script src="js/app.min.js"></script>
+
+    
+<script>
+  $(function(){
+    $(".commodity-select__param ul a").on("click", function(e){
+      e.preventDefault();
+      $(this).parent("li").addClass("active");
+      $(this).parent("li").siblings("li").removeClass("active");
+    });
+
+    $("[data-select-toggle]").on("click", function(e){
+      e.preventDefault();
+      $(".commodity-select").toggleClass("commodity-select_active");
+      $(".commodity-select_bg").toggle();
+    });
+  });
+</script>
+
+  </body>
+</html>

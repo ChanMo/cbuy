@@ -2642,3 +2642,35 @@ div {
   .login__form_active {
     opacity: 1;
     transform: translate(-50%, -40%); }
+
+.integral {
+  padding: 1rem; }
+  .integral__header {
+    background: white;
+    height: 25vh;
+    position: relative;
+    margin-bottom: 1rem; }
+    .integral__header h5 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+    .integral__header small {
+      font-size: 0.75rem;
+      margin-left: .3rem; }
+  .integral__logs {
+    background: white;
+    padding: 1rem .5rem; }
+    .integral__logs h5 {
+      border-left: 5px solid rgba(255, 0, 0, 0.8);
+      padding-left: .5rem;
+      font-size: 1.1rem; }
+    .integral__logs ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none; }
+      .integral__logs ul a {
+        display: block;
+        color: #333;
+        line-height: 2rem;
+        border-bottom: 1px solid #efefef; }

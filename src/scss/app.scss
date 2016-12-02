@@ -217,3 +217,43 @@ div {
 @import 'order_create';
 @import 'address';
 @import 'login';
+
+.integral {
+  padding: 1rem;
+  &__header {
+    background: white;
+    height: 25vh;
+    position: relative;
+    margin-bottom: 1rem;
+    h5 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    small {
+      font-size: 0.75rem;
+      margin-left: .3rem;
+    }
+  }
+  &__logs {
+    background: white;
+    padding: 1rem .5rem;
+    h5 {
+      border-left: 5px solid rgba(red, 0.8);
+      padding-left: .5rem;
+      font-size: 1.1rem;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      a {
+        display: block;
+        color: #333;
+        line-height: 2rem;
+        border-bottom: 1px solid #efefef;
+      }
+    }
+  }
+}
