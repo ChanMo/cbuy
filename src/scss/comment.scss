@@ -1,0 +1,48 @@
+@mixin comment {
+  .comment {
+    padding: 4rem .5rem;
+    &__form {
+      tr {
+        &:not(:first-child){
+          td:first-child {
+            //text-align: center;
+          }
+          td:last-child {
+            text-align: right;
+          }
+        }
+      }
+      td {
+        border: none;
+        textarea {
+          height: initial;
+          border-color: #ccc;
+          font-size: 0.85rem;
+          padding: .5rem;
+        }
+        label {
+          font-size: 0.85rem;
+        }
+        .star_list {
+          letter-spacing: 5px;
+          .fa-star {
+            color: #d94539;
+          }
+        }
+      }
+    }
+    &__action {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      .button {
+        display: block;
+        width: 100%;
+        margin: 0;
+        line-height: 2.5rem;
+        font-size: 0.85rem;
+      }
+    }
+  }
+}

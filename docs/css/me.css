@@ -26,10 +26,11 @@
       margin: 0;
       padding: 0 .5rem;
       height: 3rem;
-      line-height: 3rem; }
+      line-height: 3rem;
+      font-size: 0.85rem; }
       .me__item h6 a {
         float: right;
-        font-size: 0.9rem;
+        font-size: 0.75rem;
         color: grey; }
         .me__item h6 a:after {
           content: "\f105";
@@ -52,7 +53,7 @@
         padding: 1rem 0;
         position: relative; }
         .me__item ul li a {
-          color: black; }
+          color: #333; }
         .me__item ul li img {
           width: 35%; }
         .me__item ul li span {

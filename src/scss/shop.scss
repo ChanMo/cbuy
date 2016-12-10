@@ -1,0 +1,126 @@
+@mixin shop {
+  $primary-color: #d94539;
+  .shop {
+    &__topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 99;
+      background: transparent;
+      a {
+        color: white;
+        span {
+          margin-right: .5rem;
+          font-size: 0.75rem;
+        }
+      }
+      .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+      &-bg {
+        background: white;
+        box-shadow: 0 1px 1px lightgrey;
+        a {
+          color: #333;
+        }
+        .title {
+          opacity: 1;
+        }
+      }
+    }
+    &__header {
+      position: relative;
+      height: 30vh;
+      background-image: url(https://s-media-cache-ak0.pinimg.com/564x/00/b5/4b/00b54ba618ef5410b20f63e96b9c2198.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      .logo {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      .title {
+        position: absolute;
+        bottom: 50px;
+        transform: translateY(50%);
+        left: 120px;
+        margin: 0;
+        color: white;
+        text-shadow: 0 1px 1px #ccc;
+      }
+    }
+    &__nav {
+      margin-bottom: 1rem;
+      background: white;
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          display: inline-block;
+          a {
+            display: inline-block;
+            padding: .8rem 2rem;
+            border-bottom: 2px solid transparent;
+            font-size: 0.85rem;
+            color: #333;
+          }
+        }
+        .active {
+          a {
+            border-color: $primary-color;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    &__main {
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      a {
+        display: block;
+        width: 50%;
+        margin-bottom: .5rem;
+        padding: 0 .2rem;
+        box-sizing: border-box;
+        float: left;
+        .container {
+          margin: 0;
+          padding: 0;
+          background: white;
+          .title {
+            height: 2.4rem;
+            margin: .5rem .5rem 0 .5rem;
+            line-height: 1.2rem;
+            box-sizing: border-box;
+            overflow: hidden;
+            font-size: 0.8rem;
+            color: #333;
+          }
+          .footer {
+            padding: .5rem;
+            font-size: 0.85rem;
+            .price {
+              &:before {
+                content: "\f157";
+                font-family: FontAwesome;
+                font-size: 0.6rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

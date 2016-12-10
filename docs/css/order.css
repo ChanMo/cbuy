@@ -30,27 +30,30 @@
       height: 2.5rem;
       line-height: 2.5rem;
       font-size: 0.85rem;
-      border-bottom: 1px dashed lightgrey;
+      border-bottom: 1px dashed #eee;
       color: #333; }
     .order__item__main {
       display: flex;
-      border-bottom: 1px dashed lightgrey;
+      border-bottom: 1px dashed #eee;
       color: #333; }
     .order__item__cover {
       width: 30%; }
     .order__item__title {
       width: 70%;
-      padding: 0 .5rem .5rem; }
+      padding: .5rem; }
       .order__item__title p {
-        margin: 0; }
+        margin: 0;
+        font-size: 0.85rem; }
       .order__item__title span {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         color: darkgrey; }
     .order__item__action {
       text-align: right;
       padding: .5rem; }
       .order__item__action .button {
-        margin: 0; }
+        margin: 0;
+        padding: .2rem 1rem;
+        font-size: 0.85rem; }
 
 .order-detail {
   padding: .5rem .5rem 3.5rem; }
@@ -61,9 +64,10 @@
     .order-detail__header h6 {
       height: 2.5rem;
       line-height: 2.5rem;
-      margin: 0; }
+      margin: 0;
+      font-size: 0.85rem; }
       .order-detail__header h6 span {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         color: darkgrey; }
   .order-detail__commodity {
     background: white;
@@ -86,10 +90,11 @@
         box-sizing: border-box; }
         .order-detail__commodity a .title p {
           margin: 0;
+          font-size: 0.85rem;
           color: black; }
         .order-detail__commodity a .title span {
           color: darkgrey;
-          font-size: 0.85rem; }
+          font-size: 0.75rem; }
   .order-detail__main {
     background: white;
     padding: 1rem;
@@ -100,4 +105,7 @@
       color: darkgrey; }
   .order-detail__action {
     background: white;
-    padding: .5rem; }
+    padding: 1rem; }
+    .order-detail__action .button {
+      padding: .2rem 1rem;
+      font-size: 0.85rem; }

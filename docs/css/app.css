@@ -2063,11 +2063,13 @@ div {
       text-align: center;
       vertical-align: middle;
       font-size: 0.85rem;
-      border: none;
-      color: #666; }
+      border: none; }
+      .commodity-action table td i {
+        color: #666; }
       .commodity-action table td p {
         margin: 0;
-        font-size: 0.75rem; }
+        font-size: 0.75rem;
+        color: #666; }
 
 .commodity-select_bg {
   position: fixed;
@@ -2202,10 +2204,11 @@ div {
       margin: 0;
       padding: 0 .5rem;
       height: 3rem;
-      line-height: 3rem; }
+      line-height: 3rem;
+      font-size: 0.85rem; }
       .me__item h6 a {
         float: right;
-        font-size: 0.9rem;
+        font-size: 0.75rem;
         color: grey; }
         .me__item h6 a:after {
           content: "\f105";
@@ -2228,7 +2231,7 @@ div {
         padding: 1rem 0;
         position: relative; }
         .me__item ul li a {
-          color: black; }
+          color: #333; }
         .me__item ul li img {
           width: 35%; }
         .me__item ul li span {
@@ -2353,27 +2356,30 @@ div {
       height: 2.5rem;
       line-height: 2.5rem;
       font-size: 0.85rem;
-      border-bottom: 1px dashed lightgrey;
+      border-bottom: 1px dashed #eee;
       color: #333; }
     .order__item__main {
       display: flex;
-      border-bottom: 1px dashed lightgrey;
+      border-bottom: 1px dashed #eee;
       color: #333; }
     .order__item__cover {
       width: 30%; }
     .order__item__title {
       width: 70%;
-      padding: 0 .5rem .5rem; }
+      padding: .5rem; }
       .order__item__title p {
-        margin: 0; }
+        margin: 0;
+        font-size: 0.85rem; }
       .order__item__title span {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         color: darkgrey; }
     .order__item__action {
       text-align: right;
       padding: .5rem; }
       .order__item__action .button {
-        margin: 0; }
+        margin: 0;
+        padding: .2rem 1rem;
+        font-size: 0.85rem; }
 
 .order-detail {
   padding: .5rem .5rem 3.5rem; }
@@ -2384,9 +2390,10 @@ div {
     .order-detail__header h6 {
       height: 2.5rem;
       line-height: 2.5rem;
-      margin: 0; }
+      margin: 0;
+      font-size: 0.85rem; }
       .order-detail__header h6 span {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         color: darkgrey; }
   .order-detail__commodity {
     background: white;
@@ -2409,10 +2416,11 @@ div {
         box-sizing: border-box; }
         .order-detail__commodity a .title p {
           margin: 0;
+          font-size: 0.85rem;
           color: black; }
         .order-detail__commodity a .title span {
           color: darkgrey;
-          font-size: 0.85rem; }
+          font-size: 0.75rem; }
   .order-detail__main {
     background: white;
     padding: 1rem;
@@ -2423,7 +2431,10 @@ div {
       color: darkgrey; }
   .order-detail__action {
     background: white;
-    padding: .5rem; }
+    padding: 1rem; }
+    .order-detail__action .button {
+      padding: .2rem 1rem;
+      font-size: 0.85rem; }
 
 .order-create {
   padding: .5rem .5rem 3.5rem; }
@@ -2688,6 +2699,134 @@ div {
   .login__form_active {
     opacity: 1;
     transform: translate(-50%, -40%); }
+
+.comment {
+  padding: 4rem .5rem; }
+  .comment__form tr:not(:first-child) td:last-child {
+    text-align: right; }
+  .comment__form td {
+    border: none; }
+    .comment__form td textarea {
+      height: initial;
+      border-color: #ccc;
+      font-size: 0.85rem;
+      padding: .5rem; }
+    .comment__form td label {
+      font-size: 0.85rem; }
+    .comment__form td .star_list {
+      letter-spacing: 5px; }
+      .comment__form td .star_list .fa-star {
+        color: #d94539; }
+  .comment__action {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+    .comment__action .button {
+      display: block;
+      width: 100%;
+      margin: 0;
+      line-height: 2.5rem;
+      font-size: 0.85rem; }
+
+.shop__topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background: transparent; }
+  .shop__topbar a {
+    color: white; }
+    .shop__topbar a span {
+      margin-right: .5rem;
+      font-size: 0.75rem; }
+  .shop__topbar .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; }
+  .shop__topbar-bg {
+    background: white;
+    box-shadow: 0 1px 1px lightgrey; }
+    .shop__topbar-bg a {
+      color: #333; }
+    .shop__topbar-bg .title {
+      opacity: 1; }
+
+.shop__header {
+  position: relative;
+  height: 30vh;
+  background-image: url(https://s-media-cache-ak0.pinimg.com/564x/00/b5/4b/00b54ba618ef5410b20f63e96b9c2198.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .shop__header .logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  .shop__header .title {
+    position: absolute;
+    bottom: 50px;
+    transform: translateY(50%);
+    left: 120px;
+    margin: 0;
+    color: white;
+    text-shadow: 0 1px 1px #ccc; }
+
+.shop__nav {
+  margin-bottom: 1rem;
+  background: white; }
+  .shop__nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    .shop__nav ul li {
+      display: inline-block; }
+      .shop__nav ul li a {
+        display: inline-block;
+        padding: .8rem 2rem;
+        border-bottom: 2px solid transparent;
+        font-size: 0.85rem;
+        color: #333; }
+    .shop__nav ul .active a {
+      border-color: #d94539;
+      color: #d94539; }
+
+.shop__main:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.shop__main a {
+  display: block;
+  width: 50%;
+  margin-bottom: .5rem;
+  padding: 0 .2rem;
+  box-sizing: border-box;
+  float: left; }
+  .shop__main a .container {
+    margin: 0;
+    padding: 0;
+    background: white; }
+    .shop__main a .container .title {
+      height: 2.4rem;
+      margin: .5rem .5rem 0 .5rem;
+      line-height: 1.2rem;
+      box-sizing: border-box;
+      overflow: hidden;
+      font-size: 0.8rem;
+      color: #333; }
+    .shop__main a .container .footer {
+      padding: .5rem;
+      font-size: 0.85rem; }
+      .shop__main a .container .footer .price:before {
+        content: "\f157";
+        font-family: FontAwesome;
+        font-size: 0.6rem; }
 
 .integral {
   padding: 1rem; }

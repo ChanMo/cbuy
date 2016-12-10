@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="top-bar shop__topbar">
+  <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
+  <span class="title">某某专卖店</span>
+  <a href="javascript:;" class="float-right"><span>收藏</span><i class="fa fa-star-o fa-lg"></i></a>
+</div>
+
+<div class="container shop">
+  <div class="shop__header">
+    <img class="logo" src="https://s-media-cache-ak0.pinimg.com/564x/05/ba/25/05ba25fe1fbb0d3ce2ec325cf94bdce2.jpg">
+    <h6 class="title">某某专卖店</h6>
+  </div>
+  <div class="shop__nav">
+    <ul>
+      <li class="active"><a href="#">全部商品</a></li>
+      <li><a href="#">新品</a></li>
+    </ul>
+  </div>
+  <div class="shop__main">
+    {% for i in range(0,6) %}
+    <a href="commodity.html">
+      <div class="container">
+      <img src="https://s-media-cache-ak0.pinimg.com/564x/68/64/d4/6864d49a3583f5200446c8a334279b6e.jpg" class="cover">
+      <div class="title">商品名商品名商品名商品名商品名商品名商品名商品名商品名商品名</div>
+      <div class="footer"><span class="price">1200</span></div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+{% block js %}
+<script>
+$(function(){
+  var scroll_top = 0;
+  var max_height = $(window).height() * 0.3;
+  $(window).scroll(function(){
+    scroll_top = $(document).scrollTop();
+    if (scroll_top > max_height){
+      $(".shop__topbar").addClass("shop__topbar-bg");
+    }else{
+      $(".shop__topbar").removeClass("shop__topbar-bg");
+    }
+  });
+});
+</script>
+{% endblock %}

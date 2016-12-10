@@ -217,6 +217,11 @@ div {
 @import 'order_create';
 @import 'address';
 @import 'login';
+@import 'comment';
+@import 'shop';
+
+@include comment;
+@include shop;
 
 .integral {
   padding: 1rem;

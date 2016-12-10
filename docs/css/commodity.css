@@ -106,11 +106,13 @@
       text-align: center;
       vertical-align: middle;
       font-size: 0.85rem;
-      border: none;
-      color: #666; }
+      border: none; }
+      .commodity-action table td i {
+        color: #666; }
       .commodity-action table td p {
         margin: 0;
-        font-size: 0.75rem; }
+        font-size: 0.75rem;
+        color: #666; }
 
 .commodity-select_bg {
   position: fixed;

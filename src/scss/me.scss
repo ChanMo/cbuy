@@ -32,10 +32,11 @@
             padding: 0 .5rem;
             height: 3rem;
             line-height: 3rem;
+            font-size: 0.85rem;
 
             a {
                 float: right;
-                font-size: 0.9rem;
+                font-size: 0.75rem;
                 color: grey;
                 &:after {
                     content: "\f105";
@@ -63,7 +64,7 @@
                 padding: 1rem 0;
                 position: relative;
                 a {
-                    color: black;
+                    color: #333;
                 }
                 img {
                     width: 35%;
