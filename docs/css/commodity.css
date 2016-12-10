@@ -4,9 +4,28 @@
   left: 0;
   width: 100%;
   z-index: 9999;
-  background: rgba(255, 255, 255, 0); }
-  .commodity-topbar a {
-    color: white; }
+  background: white; }
+  .commodity-topbar ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    .commodity-topbar ul li {
+      display: inline-block; }
+      .commodity-topbar ul li a {
+        display: inline-block;
+        height: calc(3rem - 4px);
+        line-height: calc(3rem - 4px);
+        padding: 0 .2rem;
+        margin: 0 .5rem;
+        border-bottom: 2px solid transparent; }
+    .commodity-topbar ul .active a {
+      border-color: #d94539;
+      color: #d94539;
+      text-decoration: none; }
+  .commodity-topbar a, .commodity-topbar a:hover, .commodity-topbar a:active {
+    color: #333;
+    text-decoration: none; }
 
 .commodity {
   padding: 0 0 3.5rem; }
@@ -22,8 +41,9 @@
     padding: .5rem;
     background: white; }
     .commodity__param__item {
-      padding: .5rem 0;
-      border-bottom: 1px dashed #efefef; }
+      padding: .5rem 0; }
+      .commodity__param__item:not(:last-child) {
+        border-bottom: 1px dashed #efefef; }
       .commodity__param__item h6 {
         margin: 0;
         font-weight: 0; }
@@ -45,26 +65,52 @@
     .commodity__intro img {
       max-width: 100%;
       height: auto !important; }
+  .commodity .section {
+    padding-top: 3rem;
+    margin-top: -3rem; }
+    .commodity .section__container {
+      margin-top: 1rem;
+      background: white;
+      padding: 1rem .5rem; }
+    .commodity .section__title {
+      border-left: 3px solid #d94539;
+      padding-left: .5rem; }
+  .commodity__comments .comment-list {
+    padding-bottom: .5rem; }
+    .commodity__comments .comment-list:not(:last-child) {
+      border-bottom: 1px solid #eee; }
+    .commodity__comments .comment-list span {
+      color: #666;
+      font-size: 0.75rem; }
+    .commodity__comments .comment-list__header {
+      line-height: 2rem;
+      font-size: 0.85rem;
+      color: #333; }
+      .commodity__comments .comment-list__header span {
+        float: right; }
+    .commodity__comments .comment-list__main {
+      white-space: normal;
+      font-size: 0.85rem;
+      color: #333; }
 
 .commodity-action {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 3.5rem;
-  line-height: 3.5rem;
-  padding: 0 1rem;
-  background: black;
-  border-top: 1px solid #eee; }
-  .commodity-action a {
-    color: white; }
-  .commodity-action__collect span {
-    font-size: 0.85rem;
-    margin-left: .5rem; }
-  .commodity-action__buy {
-    float: right; }
-    .commodity-action__buy span {
-      margin-right: .5rem; }
+  box-shadow: 0 -1px 2px lightgrey; }
+  .commodity-action table {
+    margin: 0; }
+    .commodity-action table td {
+      padding: .5rem 0;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 0.85rem;
+      border: none;
+      color: #666; }
+      .commodity-action table td p {
+        margin: 0;
+        font-size: 0.75rem; }
 
 .commodity-select_bg {
   position: fixed;

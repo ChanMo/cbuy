@@ -15,9 +15,16 @@
     
 <div class="top-bar commodity-topbar">
   <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
+  <ul id="nav">
+    <li class="active"><a href="#commodity-main">商品</a></li>
+    <li><a href="#commodity-intro">详情</a></li>
+    <li><a href="#commodity-comments">评价</a></li>
+  </ul>
+  <a class="float-right" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
 </div>
 
 <div class="container commodity">
+  <div class="section" id="commodity-main">
 
   <div class="commodity__header">
     <div class="slide" style="height:50vh;">
@@ -57,17 +64,131 @@
       <h6>运费:</h6>
     </div>
   </div>
+  </div>
 
-
+  <div class="section" id="commodity-intro">
+    <div class="section__container">
   <div class="commodity__intro">
-    <h5>详情</h5>
+    <h6 class="section__title">商品详情</h6>
     <img src="https://s-media-cache-ak0.pinimg.com/564x/03/85/83/0385836471cb888c8a2771039513d17f.jpg">
+  </div>
+    </div>
+  </div>
+
+  <div class="section commodity__comments" id="commodity-comments">
+    <div class="section__container">
+    <h6 class="section__title">评价</h6>
+    
+    <div class="comment-list">
+      <div class="comment-list__header">
+        用户名<span>2016/12/12</span>
+      </div>
+      <div class="comment-list__main">
+        商品评价内容
+        商品评价内容
+        商品评价内容
+        商品评价内容
+        商品评价内容
+      </div>
+      <div class="comment-list__footer">
+        <span>商品型号参数</span>
+      </div>
+    </div>
+    
+    <div class="comment-list">
+      <div class="comment-list__header">
+        用户名<span>2016/12/12</span>
+      </div>
+      <div class="comment-list__main">
+        商品评价内容
+        商品评价内容
+        商品评价内容
+        商品评价内容
+        商品评价内容
+      </div>
+      <div class="comment-list__footer">
+        <span>商品型号参数</span>
+      </div>
+    </div>
+    
+    <div class="comment-list">
+      <div class="comment-list__header">
+        用户名<span>2016/12/12</span>
+      </div>
+      <div class="comment-list__main">
+        商品评价内容
+        商品评价内容
+        商品评价内容
+        商品评价内容
+        商品评价内容
+      </div>
+      <div class="comment-list__footer">
+        <span>商品型号参数</span>
+      </div>
+    </div>
+    
+    <div class="comment-list">
+      <div class="comment-list__header">
+        用户名<span>2016/12/12</span>
+      </div>
+      <div class="comment-list__main">
+        商品评价内容
+        商品评价内容
+        商品评价内容
+        商品评价内容
+        商品评价内容
+      </div>
+      <div class="comment-list__footer">
+        <span>商品型号参数</span>
+      </div>
+    </div>
+    
+    <div class="comment-list">
+      <div class="comment-list__header">
+        用户名<span>2016/12/12</span>
+      </div>
+      <div class="comment-list__main">
+        商品评价内容
+        商品评价内容
+        商品评价内容
+        商品评价内容
+        商品评价内容
+      </div>
+      <div class="comment-list__footer">
+        <span>商品型号参数</span>
+      </div>
+    </div>
+    
+    <div class="comment-list">
+      <div class="comment-list__header">
+        用户名<span>2016/12/12</span>
+      </div>
+      <div class="comment-list__main">
+        商品评价内容
+        商品评价内容
+        商品评价内容
+        商品评价内容
+        商品评价内容
+      </div>
+      <div class="comment-list__footer">
+        <span>商品型号参数</span>
+      </div>
+    </div>
+    
+    </div>
   </div>
 </div>
 
 <div class="commodity-action">
-  <a href="javascript:;" class="commodity-action__collect"><i class="fa fa-star-o"></i><span>收藏</span></a>
-  <a href="order_create.html" data-select-toggle class="commodity-action__buy"><span>购买</span><i class="fa fa-arrow-right"></i></a>
+  <table>
+    <tr>
+      <td><i class="fa fa-comments-o fa-lg"></i><p>客服</p></td>
+      <td><i class="fa fa-home fa-lg"></i><p>店铺</p></td>
+      <td><i class="fa fa-star-o fa-lg"></i><p>收藏</p></td>
+      <td style="background:#FD9303;color:white;" data-select-toggle ><p>加入购物车</p></td>
+      <td style="background:#EB5805;color:white;" data-select-toggle ><p>立即购买</p></td>
+    </tr>
+  </table>
 </div>
 
 
@@ -126,8 +247,15 @@
     <script src="js/app.min.js"></script>
 
     
+<script src="https://cdn.bootcss.com/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
 <script>
   $(function(){
+
+    /** nav **/
+    $("#nav").onePageNav({
+      currentClass: "active"
+    });
+
     $(".commodity-select__param ul a").on("click", function(e){
       e.preventDefault();
       $(this).parent("li").addClass("active");

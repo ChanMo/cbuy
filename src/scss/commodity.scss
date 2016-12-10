@@ -1,12 +1,39 @@
+$primary-color: #d94539;
+
 .commodity-topbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9999;
-    background: rgba(white, 0);
-    a {
-        color: white;
+    background: rgba(white, 1);
+    ul {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        display: inline-block;
+        a {
+          display: inline-block;
+          height: calc(3rem - 4px);
+          line-height: calc(3rem - 4px);
+          padding: 0 .2rem;
+          margin: 0 .5rem;
+          border-bottom: 2px solid transparent;
+        }
+      }
+      .active {
+        a {
+          border-color: $primary-color;
+          color: $primary-color;
+          text-decoration: none;
+        }
+      }
+    }
+    a,a:hover,a:active {
+        color: #333;
+        text-decoration: none;
     }
 }
 .commodity {
@@ -27,8 +54,10 @@
         padding: .5rem;
         background: white;
         &__item {
-            padding: .5rem 0;
+          &:not(:last-child){
             border-bottom: 1px dashed #efefef;
+          }
+            padding: .5rem 0;
             h6 {
                 margin: 0;
                 font-weight: 0;
@@ -60,6 +89,47 @@
             height: auto !important;
         }
     }
+
+    .section {
+      padding-top: 3rem;
+      margin-top: -3rem;
+      &__container {
+        margin-top: 1rem;
+        background: white;
+        padding: 1rem .5rem;
+      }
+      &__title {
+        //margin: 0 .5rem;
+        border-left: 3px solid $primary-color;
+        padding-left: .5rem;
+      }
+    }
+
+    &__comments {
+      .comment-list {
+        &:not(:last-child){
+          border-bottom: 1px solid #eee;
+        }
+        padding-bottom: .5rem;
+        span {
+          color: #666;
+          font-size: 0.75rem;
+        }
+        &__header {
+          line-height: 2rem;
+          font-size: 0.85rem;
+          color: #333;
+          span {
+            float: right;
+          }
+        }
+        &__main {
+          white-space: normal;
+          font-size: 0.85rem;
+          color: #333;
+        }
+      }
+    }
 }
 
 .commodity-action {
@@ -67,26 +137,21 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    $size: 3.5rem;
-    height: $size;
-    line-height: $size;
-    padding: 0 1rem;
-    background: black;
-    border-top: 1px solid #eee;
-    a {
-        color: white;
-    }
-    &__collect {
-        span {
-            font-size: 0.85rem;
-            margin-left: .5rem;
+    box-shadow: 0 -1px 2px lightgrey;
+    table {
+      margin: 0;
+      td {
+        padding: .5rem 0;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 0.85rem;
+        border: none;
+        color: #666;
+        p {
+          margin: 0;
+          font-size: 0.75rem;
         }
-    }
-    &__buy {
-        float: right;
-        span {
-            margin-right: .5rem;
-        }
+      }
     }
 }
 
@@ -100,6 +165,7 @@
     z-index: 9999;
     display: none;
 }
+
 .commodity-select {
     z-index: 10000;
     position: fixed;
