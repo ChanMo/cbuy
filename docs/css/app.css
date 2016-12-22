@@ -2261,69 +2261,6 @@ div {
           .me__item table td a p {
             margin: 5px 0 0; }
 
-.cart {
-  padding: 1rem .5rem 3.5rem; }
-  .cart__item {
-    background: white;
-    padding: 0 .5rem;
-    margin-bottom: .5rem; }
-  .cart__header {
-    height: 2rem;
-    line-height: 2rem;
-    border-bottom: 1px dashed #efefef; }
-    .cart__header .fa-trash {
-      color: darkgrey; }
-  .cart__main {
-    padding: .5rem 0;
-    display: flex;
-    border-bottom: 1px dashed #efefef; }
-  .cart__cover {
-    display: block;
-    width: 30vw;
-    height: 30vw; }
-  .cart__title {
-    width: 70vw;
-    padding: 0 .5rem; }
-    .cart__title p {
-      margin: 0; }
-    .cart__title span {
-      color: darkgrey; }
-  .cart__action {
-    padding: .5rem 0;
-    text-align: right; }
-    .cart__action a {
-      display: inline-block;
-      padding: .3rem 1.5rem;
-      background: #FFA530;
-      color: white;
-      font-size: 0.85rem; }
-
-.cart__checkout {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 3.5rem;
-  line-height: 3.5rem;
-  padding-left: 1rem;
-  background: white;
-  text-align: center;
-  transform: translateX(-100%);
-  transition: all .4s; }
-  .cart__checkout label {
-    float: left; }
-  .cart__checkout a {
-    display: block;
-    float: right;
-    width: 35vw;
-    height: 100%;
-    background: #FFA530;
-    color: white;
-    text-align: center; }
-
-.cart__checkout_active {
-  transform: translateX(0); }
-
 .order {
   padding-bottom: 3.5rem; }
   .order__nav ul {
@@ -2827,6 +2764,88 @@ div {
         content: "\f157";
         font-family: FontAwesome;
         font-size: 0.6rem; }
+
+input[type='checkbox']:checked + label:before {
+  color: #F24D16 !important; }
+
+.price {
+  font-weight: 600 !important; }
+
+.cart {
+  padding: 1rem 0 3.5rem; }
+  .cart table {
+    margin-bottom: .5rem;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.12); }
+    .cart table th {
+      padding: 0 .5rem;
+      border: none;
+      line-height: 2.5rem;
+      font-weight: 100;
+      font-size: 0.85rem;
+      color: rgba(0, 0, 0, 0.87); }
+      .cart table th:first-child {
+        padding: 0 .6rem; }
+      .cart table th:not(:first-child) {
+        padding-left: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+      .cart table th img {
+        height: 1.5rem; }
+      .cart table th label:before {
+        margin: 0; }
+    .cart table tbody p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: rgba(0, 0, 0, 0.87); }
+      .cart table tbody p span {
+        font-size: 0.75rem;
+        color: rgba(0, 0, 0, 0.54); }
+    .cart table tbody tr td {
+      padding: .5rem;
+      border: none; }
+      .cart table tbody tr td:nth-child(1) {
+        vertical-align: middle;
+        width: 1%;
+        padding: .5rem .6rem; }
+        .cart table tbody tr td:nth-child(1) label:before {
+          margin: 0; }
+      .cart table tbody tr td:nth-child(2) {
+        width: 20vw;
+        padding-left: 0;
+        box-sizing: border-box; }
+      .cart table tbody tr td:nth-child(4) {
+        text-align: right;
+        width: 1%;
+        white-space: nowrap; }
+    .cart table tbody tr:not(:last-child) td:not(:first-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+
+.cart__checkout {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  padding-left: 1rem;
+  background: white;
+  text-align: center;
+  transform: translateX(-100%);
+  transition: all .4s;
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.87); }
+  .cart__checkout label {
+    float: left; }
+  .cart__checkout a {
+    display: block;
+    float: right;
+    width: 35vw;
+    height: 100%;
+    background: #F24D16;
+    color: white;
+    text-align: center; }
+
+.cart__checkout_active {
+  transform: translateX(0); }
 
 .integral {
   padding: 1rem; }

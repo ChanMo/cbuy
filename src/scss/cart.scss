@@ -1,76 +1,110 @@
-.cart {
-    padding: 1rem .5rem 3.5rem;
-    &__item {
-        background: white;
+@mixin cart {
+  $primary-color: #F24D16;
+
+  input[type='checkbox']:checked + label:before {
+    color: $primary-color !important;
+  }
+  .price {
+    font-weight: 600 !important;
+  }
+  .cart {
+    padding: 1rem 0 3.5rem;
+    table {
+      margin-bottom: .5rem;
+      box-shadow: 0 1px 4px 0 rgba(black, 0.12);
+      th {
         padding: 0 .5rem;
-        margin-bottom: .5rem;
-    }
-    &__header {
-        height: 2rem;
-        line-height: 2rem;
-        border-bottom: 1px dashed #efefef;
-        .fa-trash {
-            color: darkgrey;
+        border: none;
+        line-height: 2.5rem;
+        font-weight: 100;
+        font-size: 0.85rem;
+        color: rgba(black, 0.87);
+        &:first-child {
+          padding: 0 .6rem;
         }
-    }
-    &__main {
-        padding: .5rem 0;
-        display: flex;
-        border-bottom: 1px dashed #efefef;
-    }
-    &__cover {
-        display: block;
-        width: 30vw;
-        height: 30vw;
-    }
-    &__title {
-        width: 70vw;
-        padding: 0 .5rem;
+        &:not(:first-child) {
+          padding-left: 0;
+          border-bottom: 1px solid rgba(black, 0.06);
+        }
+        img {
+          height: 1.5rem;
+        }
+        label:before {
+          margin: 0;
+        }
+      }
+      tbody {
         p {
-            margin: 0;
+          margin: 0;
+          font-size: 0.85rem;
+          color: rgba(black, 0.87);
+          span {
+            font-size: 0.75rem;
+            color: rgba(black, 0.54);
+          }
         }
-        span {
-            color: darkgrey;
+        tr {
+          td {
+            padding: .5rem;
+            border: none;
+            &:nth-child(1) {
+              vertical-align: middle;
+              width: 1%;
+              padding: .5rem .6rem;
+              label:before {
+                margin: 0;
+              }
+            }
+            &:nth-child(2) {
+              width: 20vw;
+              padding-left: 0;
+              box-sizing: border-box;
+            }
+            &:nth-child(3) {
+            }
+            &:nth-child(4) {
+              text-align: right;
+              width: 1%;
+              white-space: nowrap;
+            }
+          }
+          &:not(:last-child) td {
+            &:not(:first-child) {
+              border-bottom: 1px solid rgba(black, 0.06);
+            }
+          }
         }
+      }
     }
-    &__action {
-        padding: .5rem 0;
-        text-align: right;
-        a {
-            display: inline-block;
-            padding: .3rem 1.5rem;
-            background: #FFA530;
-            color: white;
-            font-size: 0.85rem;
-            //border-radius: .5rem;
-        }
-    }
-}
-.cart__checkout {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 3.5rem;
-    line-height: 3.5rem;
-    padding-left: 1rem;
-    background: white;
-    text-align: center;
-    transform: translateX(-100%);
-    transition: all .4s;
-    label {
-        float: left;
-    }
-    a {
-        display: block;
-        float: right;
-        width: 35vw;
-        height: 100%;
-        background: #FFA530;
-        color: white;
-        text-align: center;
-    }
-}
-.cart__checkout_active {
-    transform: translateX(0);
+  }
+  .cart__checkout {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 3.5rem;
+      line-height: 3.5rem;
+      padding-left: 1rem;
+      background: white;
+      text-align: center;
+      transform: translateX(-100%);
+      transition: all .4s;
+      font-size: 0.85rem;
+      color: rgba(black, 0.87);
+      label {
+          float: left;
+      }
+      a {
+          display: block;
+          float: right;
+          width: 35vw;
+          height: 100%;
+          background: $primary-color;
+          color: white;
+          text-align: center;
+      }
+  }
+  .cart__checkout_active {
+      transform: translateX(0);
+  }
 }
