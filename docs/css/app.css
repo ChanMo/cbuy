@@ -1543,7 +1543,7 @@ div {
     width: 20vw;
     height: 20vw; }
   .commodity-item__info {
-    width: 70%;
+    width: 80vw;
     padding: 0 1rem; }
     .commodity-item__info p {
       margin: 0; }
