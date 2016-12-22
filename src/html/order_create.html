@@ -8,7 +8,7 @@
 <div class="container order-create">
 
   <div class="order-create__item">
-    <h5>Commodity</h5>
+    <h6>商品</h6>
     <div class="order-create__content">
       {% for i in range(0,2) %}
       {% include "commodity_item.html" %}
@@ -17,24 +17,24 @@
   </div>
 
   <div class="order-create__item">
-    <h5>Address</h5>
+    <h6>收货地址<a href="#"><i class="fa fa-plus"></i></a></h6>
     <div class="order-create__content">
       {% for i in range(0,3) %}
       <div class="order-create__address {% if loop.first %}order-create__address_active{% endif %}">
-        <h6>ChanMo<span>15550000000</span></h6>
-        <p>China, Luoyang</p>
+        <p>收货人姓名<span>15550000000</span></p>
+        <p>详细收货地址</p>
       </div>
       {% endfor %}
     </div>
   </div>
 
 
-  <div class="order-create__item">
-    <h5>Price</h5>
+  <div class="order-create__item order-create__info">
+    <h6>价格</h6>
     <div class="order-create__content">
-      <p>Price:<span class="float-right">1200</span></p>
-      <p>devialy:<span class="float-right">20</span></p>
-      <p>Price All:<span class="float-right price">1220</span></p>
+      <p>商品价格:<span class="float-right">1200</span></p>
+      <p>运费:<span class="float-right">20</span></p>
+      <p>应付总额:<span class="float-right price">1220</span></p>
     </div>
   </div>
 </div>

@@ -143,8 +143,12 @@ div {
   display: flex;
   padding: .5rem;
   color: black;
+  &:not(:last-child){
+  border-bottom: 1px dashed rgba(black, 0.06);
+  }
   &__cover {
-    width: 30%;
+    width: 20vw;
+    height: 20vw;
   }
   &__info {
     width: 70%;
@@ -223,6 +227,7 @@ div {
 @include comment;
 @include shop;
 @include cart;
+@include checkout;
 
 .integral {
   padding: 1rem;
