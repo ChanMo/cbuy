@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block main %}
+
+<div class="top-bar">
+  <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
+  <span>订单评价</span>
+</div>
+
+<div class="container comment">
+  <div class="box comment__commodity-list">
+    <table>
+      {% for i in range(0,2) %}
+      <tr>
+        <td class="cover"><img src="https://s-media-cache-ak0.pinimg.com/564x/34/2b/df/342bdf64675f1d5950ff2057504a21ed.jpg"></td>
+        <td><p>商品名</p><a class="button button_hollow float-right" href="comment_commodity.html">去评价</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <div class="box comment__order">
+    <div class="comment__order__header">订单评价</div>
+    <form>
+      <table class="comment__order__form">
+        <tr>
+          <td>服务态度：</td>
+          <td><input type="star"></td>
+        </tr>
+        <tr>
+          <td>快递服务：</td>
+          <td><input type="star"></td>
+        </tr>
+      </table>
+      <div class="comment__order__action">
+        <input type="submit" value="发表评价" class="button button_hollow">
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="js/star.js"></script>
+{% endblock %}

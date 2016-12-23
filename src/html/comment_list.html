@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block main %}
+
+<div class="top-bar">
+  <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
+  <span>评价中心</span>
+</div>
+
+<div class="container comment">
+  {% for i in range(0,2) %}
+  <div class="box comment__commodity-list">
+    <table>
+      <tr>
+        <td class="cover"><img src="https://s-media-cache-ak0.pinimg.com/564x/34/2b/df/342bdf64675f1d5950ff2057504a21ed.jpg"></td>
+        <td><p>商品名</p><a class="button button_hollow float-right" href="comment_commodity.html">去评价</a></td>
+      </tr>
+    </table>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

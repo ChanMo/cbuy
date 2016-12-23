@@ -2556,22 +2556,76 @@ div {
     transform: translate(-50%, -40%); }
 
 .comment {
-  padding: 4rem .5rem; }
-  .comment__form tr:not(:first-child) td:last-child {
-    text-align: right; }
-  .comment__form td {
-    border: none; }
-    .comment__form td textarea {
-      height: initial;
-      border-color: #ccc;
+  padding: 1rem 0;
+  /** common **/ }
+  .comment .box {
+    margin-bottom: .5rem;
+    background: white;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.12); }
+  .comment .textarea {
+    padding: 0 !important; }
+    .comment .textarea textarea {
+      margin: 0;
+      padding: .5rem;
+      height: auto;
+      line-height: auto;
+      border: none;
+      background: rgba(0, 0, 0, 0.06);
+      font-size: 0.8rem; }
+  .comment label {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.54); }
+  .comment input[type='checkbox']:checked + label:before {
+    color: #F24D16; }
+  .comment .star_list {
+    display: inline-block;
+    width: auto !important;
+    float: none !important;
+    letter-spacing: 5px; }
+    .comment .star_list .fa-star {
+      color: #F24D16; }
+  .comment table {
+    margin: 0; }
+    .comment table td {
+      padding: .5rem;
+      border: none;
+      background: transparent; }
+  .comment p {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.87); }
+  .comment .cover {
+    width: 25%; }
+  .comment .button {
+    margin: 0 .5rem 0 0;
+    padding: 0 1rem;
+    font-size: 0.8rem; }
+  .comment__commodity-list table {
+    margin: 0; }
+    .comment__commodity-list table tr:not(:last-child) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+    .comment__commodity-list table tr td {
+      padding: .5rem;
+      border: none; }
+  .comment__order {
+    margin-bottom: .5rem; }
+    .comment__order__header {
+      padding: 0 1rem;
+      line-height: 2.5rem;
       font-size: 0.85rem;
-      padding: .5rem; }
-    .comment__form td label {
-      font-size: 0.85rem; }
-    .comment__form td .star_list {
-      letter-spacing: 5px; }
-      .comment__form td .star_list .fa-star {
-        color: #d94539; }
+      color: rgba(0, 0, 0, 0.87);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+    .comment__order__form {
+      margin: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+      .comment__order__form tr td {
+        padding: .5rem 1rem;
+        border: none;
+        vertical-align: middle;
+        font-size: 0.8rem;
+        color: rgba(0, 0, 0, 0.54); }
+    .comment__order__action {
+      padding: .5rem;
+      text-align: right; }
   .comment__action {
     position: fixed;
     bottom: 0;
@@ -2581,7 +2635,7 @@ div {
       display: block;
       width: 100%;
       margin: 0;
-      line-height: 2.5rem;
+      line-height: 2rem;
       font-size: 0.85rem; }
 
 .shop__topbar {

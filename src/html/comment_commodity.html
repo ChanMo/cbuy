@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="top-bar">
+  <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
+  <span>评价</span>
+</div>
+
+<div class="container comment">
+  <div class="box">
+    <table>
+      <tr>
+        <td class="cover"><img src="https://s-media-cache-ak0.pinimg.com/564x/48/3b/29/483b293c948424ad64ecd78e71b8127f.jpg"></td>
+        <td><p>商品名</p><input type="star"></td>
+      </tr>
+      <tr><td colspan=2 class="textarea"><textarea rows=5 placeholder="分享你的购买心得"></textarea></td></tr>
+      <tr><td colspan=2><input type="checkbox" id="is_anonymous"><label for="is_anonymous">匿名评价</label></td></tr>
+    </table>
+  </div>
+
+  <div class="box comment__order">
+    <div class="comment__order__header">订单评价</div>
+    <form>
+      <table class="comment__order__form">
+        <tr>
+          <td>服务态度：</td>
+          <td><input type="star"></td>
+        </tr>
+        <tr>
+          <td>快递服务：</td>
+          <td><input type="star"></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</div>
+
+<div class="comment__action">
+  <input type="submit" value="提交评论" class="button">
+</div>
+{% endblock %}
+{% block js %}
+<script src="js/star.js"></script>
+{% endblock %}
