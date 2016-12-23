@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% block main %}
+
+{% set banner_list=['https://s-media-cache-ak0.pinimg.com/564x/28/57/e0/2857e05fff461c8c7be6c2fab19d28aa.jpg','https://s-media-cache-ak0.pinimg.com/564x/f8/e0/9c/f8e09c46c6d07e34ae2d3330d6066684.jpg','https://s-media-cache-ak0.pinimg.com/564x/54/a9/e3/54a9e371502194fd02a05be88babbb0b.jpg'] %}
+
+<div class="home2">
+
+  <!-- topbar -->
+  <div class="top-bar">
+    <table>
+      <tr>
+        <td><a href="#">神都</a></td>
+        <td><label><input type="search" placeholder="输入商品名"></label></td>
+        <td><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- banner -->
+  <div class="banner-list">
+    <!-- imagesize: 640*300 -->
+    <div class="slide" style="height:30vh;">
+      <ul class="slide__main">
+        {% for banner in banner_list %}
+        <li><a href="#" style="background-image:url({{ banner }});"></a></li>
+        {% endfor %}
+      </ul>
+      <ul class="slide__nav">
+        {% for i in banner_list %}
+        <li {% if loop.first %} class="active" {% endif %}><a href="#"></a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <!-- nav -->
+  <div class="nav-block">
+    <table>
+      {% for i in range(0,2) %}
+      <tr>
+        {% for j in range(0,4) %}
+        <td><a href="#"><img src="http://download.easyicon.net/png/1113638/512/"><span>四字名称</span></a></td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <!-- system-notice -->
+  <div class="box">
+    <div class="home2__subheader">
+      <h6>系统公告</h6>
+      {% for i in range(0,4) %}
+      <a href="#" class="notice-scrolling {% if loop.first %}notice-scrolling_active{% endif %}"><span>公告标题{{ i }}</a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- advertisement -->
+  <div class="box">
+    <!-- imagesize: 640*300 -->
+    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/89/15/fb/8915fbbb1fa8ed2e2e825aa38412b6ee.jpg"></a>
+  </div>
+
+  <!-- recommend scroll -->
+  <div class="box">
+    <div class="home2__subheader">
+      <h6>新品上架</h6>
+      <span></span>
+    </div>
+    <ul class="recommend-scrolling">
+      {% for i in range(0,6) %}
+      <li>
+        <a href="#">
+          <!-- imagesize: 400*400 -->
+          <img src="https://s-media-cache-ak0.pinimg.com/236x/8c/29/6e/8c296e21818ecb80c3b6b6864f5bd2ef.jpg">
+          <p>商品名</p>
+          <p><span class="price">1200.00</span></p>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- hot sale -->
+  <div class="box">
+    <div class="home2__subheader">
+      <h6>热门商品</h6>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- advertisement -->
+  <div class="box">
+    <!-- imagesize: 640*300 -->
+    <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/27/bb/8f/27bb8fd20b7ec8934ebc473cdd4645a9.jpg"></a>
+  </div>
+
+  <!-- commodity-list -->
+  <div class="home2__commodity-list">
+  {% for i in range(0,6) %}
+  <a href="commodity.html" class="box">
+    <!-- imagesize: 400*400 -->
+    <img src="https://s-media-cache-ak0.pinimg.com/564x/49/26/7e/49267e29ac3a6d08bdac06d0400985d9.jpg">
+    <p>商品名</p>
+    <p><span class="price">1200</span></p>
+  </a>
+  {% endfor %}
+  </div>
+
+</div>
+{% endblock %}
+{% block js %}
+<script>
+$(function(){
+  var notices = $(".notice-scrolling");
+  var notices_index = 1;
+  window.setInterval(function(){
+    $(".notice-scrolling_active").removeClass("notice-scrolling_active");
+    $(".notice-scrolling").eq(notices_index).addClass("notice-scrolling_active");
+    if(notices_index++ == notices.length-1) {
+      notices_index = 0;
+    }
+  }, 3000);
+});
+</script>
+{% endblock %}

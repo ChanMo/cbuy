@@ -18,6 +18,12 @@
 @import 'components/modal';
 @import 'components/slide';
 
+.box {
+  margin-bottom: .5rem;
+  background: white;
+  box-shadow: 0 1px 4px 0 rgba(black, 0.12);
+}
+
 
 input[type='checkbox'] {
   display: none;
@@ -212,6 +218,7 @@ div {
 
 
 @import 'home';
+@import 'home2';
 @import 'category_tree';
 @import 'list';
 @import 'commodity';
@@ -224,6 +231,7 @@ div {
 @import 'comment';
 @import 'shop';
 
+@include home2;
 @include comment;
 @include shop;
 @include cart;
