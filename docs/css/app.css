@@ -2641,6 +2641,7 @@ div {
     .home2 .top-bar label input {
       margin: 0;
       height: 2rem;
+      line-height: auto;
       border: none;
       border-radius: .3rem; }
     .home2 .top-bar a {
@@ -2656,8 +2657,6 @@ div {
       margin-top: .2rem;
       font-size: 0.75rem;
       color: rgba(0, 0, 0, 0.54); }
-
-@keyframes notice {
   0% {
     opacity: 0;
     transform: translateY(0%); }
@@ -2669,7 +2668,43 @@ div {
     transform: translateY(-50%); }
   100% {
     opacity: 0;
-    transform: translateY(-100%); } }
+    transform: translateY(-100%); }
+  0% {
+    opacity: 0;
+    transform: translateY(0%); }
+  20% {
+    opacity: 1;
+    transform: translateY(-50%); }
+  80% {
+    opacity: 1;
+    transform: translateY(-50%); }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%); }
+  0% {
+    opacity: 0;
+    transform: translateY(0%); }
+  20% {
+    opacity: 1;
+    transform: translateY(-50%); }
+  80% {
+    opacity: 1;
+    transform: translateY(-50%); }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%); }
+  0% {
+    opacity: 0;
+    transform: translateY(0%); }
+  20% {
+    opacity: 1;
+    transform: translateY(-50%); }
+  80% {
+    opacity: 1;
+    transform: translateY(-50%); }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%); }
   .home2 .notice-scrolling {
     position: absolute;
     top: 50%;

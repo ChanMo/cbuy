@@ -107,6 +107,7 @@
         input {
           margin: 0;
           height: 2rem;
+          line-height: auto;
           border: none;
           border-radius: .3rem;
         }
@@ -137,25 +138,29 @@
       }
     }
 
+    $browers:('@','@-moz-','@-webkit','@-o-');
 
-    @keyframes notice {
-      0% {
-        opacity: 0;
-        transform: translateY(0%);
-      }
-      20% {
-        opacity: 1;
-        transform: translateY(-50%);
-      }
-      80% {
-        opacity: 1;
-        transform: translateY(-50%);
-      }
-      100% {
-        opacity: 0;
-        transform: translateY(-100%);
+    @each $brower in $browers {
+      #{$brower}keyframes notice {
+        0% {
+          opacity: 0;
+          transform: translateY(0%);
+        }
+        20% {
+          opacity: 1;
+          transform: translateY(-50%);
+        }
+        80% {
+          opacity: 1;
+          transform: translateY(-50%);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-100%);
+        }
       }
     }
+
     .notice-scrolling {
       position: absolute;
       top: 50%;
