@@ -4,6 +4,7 @@ A classic mobile shop templates.
 ## References and Credits
 * [Juss](https://github.com/ChanMo/juss)
 * [FontAwesome](https://fontawesome.io/)
+* [Pinterest](https://pinterest.html/)
 
 ## Template List
 * `base.html` base template, include header, css, js
