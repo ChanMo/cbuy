@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block main %}
+
+<div class="container">
+
+  <div style="box-shadow:0 2px 6px 0 rgba(0,0,0,0.2);">
+  <!-- topbar -->
+  <div class="top-bar top-bar_primary">
+    <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
+    <span>标题</span>
+  </div>
+
+  <!-- tabs -->
+  <div class="tabs" style="box-shadow:none;">
+    <ul>
+      <li class="active"><a href="#">标题1</a></li>
+      <li><a href="#">标题2</a></li>
+    </ul>
+  </div>
+  <!-- tabs end -->
+  </div>
+
+  <!-- list -->
+  <div class="list">
+    <ul>
+      {% for i in range(0,6) %}
+      <li>
+        <a href="#">
+          <p class="list__title">
+            <span style="font-size:1.2rem;color:red;">1200</span>
+            名字
+          </p>
+          <p>
+            <span>描述</span>
+            <span class="float-right">2016/12/12 12:12:12</span>
+          </p>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <!-- list end -->
+
+</div>
+{% endblock %}

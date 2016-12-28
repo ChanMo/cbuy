@@ -19,3 +19,11 @@
   top: 0;
   left: 0;
 }
+
+.top-bar_primary {
+  background: $primary-color !important;
+  color: white !important;
+  a {
+    color: white !important;
+  }
+}

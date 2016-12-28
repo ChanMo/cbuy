@@ -1329,6 +1329,12 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   top: 0;
   left: 0; }
 
+.top-bar_primary {
+  background: #d94539 !important;
+  color: white !important; }
+  .top-bar_primary a {
+    color: white !important; }
+
 .pagination {
   margin: 0 0 1rem 0; }
   .pagination a {
@@ -1447,6 +1453,79 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   background: white;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.12); }
 
+/** tabs **/
+.tabs {
+  margin-bottom: .5rem;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }
+  .tabs ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 3rem;
+    list-style-type: none;
+    background: #d94539; }
+    .tabs ul li {
+      display: block;
+      width: 100%;
+      padding: 0 .75rem 1.125rem 0.75rem;
+      border-bottom: 0.125rem solid transparent;
+      text-align: center;
+      line-height: calc(3rem - 0.125rem); }
+      .tabs ul li a {
+        font-size: 0.85rem;
+        color: white; }
+    .tabs ul .active {
+      border-color: white; }
+
+/** list **/
+.list {
+  margin-bottom: .5rem;
+  width: 100%;
+  background: white;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.12); }
+  .list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    .list ul li {
+      padding: .5rem 1rem; }
+      .list ul li:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+      .list ul li p {
+        margin: 0;
+        font-size: 0.85rem;
+        color: rgba(0, 0, 0, 0.87); }
+        .list ul li p span {
+          font-size: 0.75rem;
+          color: rgba(0, 0, 0, 0.54); }
+
+/** list end **/
+/** list table **/
+.list-table table tr:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06); }
+
+.list-table table td {
+  padding: .5rem 1rem;
+  border: none;
+  box-sizing: border-box;
+  vertical-align: middle; }
+
+.list-table__cover {
+  width: 5.5rem; }
+
+.list-table__content {
+  padding: .5rem 0 !important; }
+  .list-table__content a {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.87); }
+    .list-table__content a:hover {
+      color: #d94539; }
+
+.list-table__action {
+  width: 3rem;
+  color: rgba(0, 0, 0, 0.38); }
+
+/** list table end **/
 input[type='checkbox'] {
   display: none; }
   input[type='checkbox'] + label:before {
@@ -3103,3 +3182,68 @@ input[type='checkbox']:checked + label:before {
         font-size: 0.8rem;
         color: rgba(0, 0, 0, 0.54);
         line-height: 2rem; }
+
+.member {
+  height: 100vh;
+  background: white; }
+  .member__topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 3rem;
+    padding: 0 1rem;
+    z-index: 9;
+    text-align: center;
+    color: white; }
+    .member__topbar a {
+      color: white; }
+    .member__topbar span {
+      font-size: 0.85rem; }
+  .member__header {
+    height: 35vh;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center; }
+    .member__header__container {
+      position: relative;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0), rgba(0, 188, 212, 0.4)); }
+    .member__header .avatar {
+      display: inline-block;
+      width: 20vw;
+      height: 20vw;
+      border-radius: 20vw;
+      border: 2px;
+      margin-bottom: .5rem; }
+    .member__header .name {
+      position: absolute;
+      bottom: 1rem;
+      right: 4rem;
+      color: white;
+      font-size: 1.2rem; }
+  .member__main {
+    margin-bottom: 1rem; }
+    .member__main table {
+      margin: 0; }
+      .member__main table td {
+        height: 3rem;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        vertical-align: middle; }
+        .member__main table td:first-child {
+          padding: 0 2rem 0 1rem;
+          width: 4.5rem;
+          box-sizing: border-box;
+          text-align: center;
+          color: rgba(0, 0, 0, 0.38); }
+        .member__main table td:last-child {
+          padding-right: 1rem;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+          .member__main table td:last-child a {
+            color: rgba(0, 0, 0, 0.87); }
+            .member__main table td:last-child a:hover {
+              text-decoration: none; }
+        .member__main table td:hover i, .member__main table td:hover a {
+          color: #00bcd4; }

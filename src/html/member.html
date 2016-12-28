@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% set link_list = [
+  {'icon':'fa-truck','name':'我的订单','link':'order.html'},
+  {'icon':'fa-edit','name':'我的信息','link':'me.html'},
+  {'icon':'fa-map-marker','name':'收货地址','link':'address.html'},
+  {'icon':'fa-money','name':'我的积分','link':'integral.html'},
+  {'icon':'fa-shopping-cart','name':'购物车','link':'cart.html'},
+  {'icon':'fa-sign-out','name':'退出帐号','link':'login.html'},
+  {'icon':'fa-list','name':'小列表','link':'list2.html'},
+  {'icon':'fa-star','name':'我的收藏','link':'collection.html'}
+] %}
+
+{% block main %}
+<div class="container member">
+
+  <!-- topbar -->
+  <div class="member__topbar">
+    <a href="javascript:window.history.back();" class="float-left">
+      <i class="fa fa-angle-left fa-lg"></i>
+    </a>
+    <a href="#" class="float-right">
+      <i class="fa fa-pencil"></i>
+    </a>
+  </div>
+
+  <!-- header -->
+  <div class="member__header" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/1a/db/f1/1adbf13434694c7472bf19568047226b.jpg);">
+    <div class="member__header__container">
+      <h6 class="name">某某某</h6>
+    </div>
+  </div>
+
+  <!-- link list -->
+  <div class="member__main">
+    <table>
+      {% for item in link_list %}
+      <tr>
+        <td>
+          <i class="fa {{ item.icon }} fa-lg"></i>
+        </td>
+        <td>
+          <a href="{{ item.link }}">{{ item.name }}</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock %}

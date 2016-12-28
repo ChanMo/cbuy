@@ -1334,6 +1334,12 @@ input:focus:invalid, select:focus:invalid, textarea:focus:invalid {
   top: 0;
   left: 0; }
 
+.top-bar_primary {
+  background: #d94539 !important;
+  color: white !important; }
+  .top-bar_primary a {
+    color: white !important; }
+
 .pagination {
   margin: 0 0 1rem 0; }
   .pagination a {

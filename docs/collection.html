@@ -1,0 +1,109 @@
+<!doctype html>
+<html class="no-js" lang="zh-hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>CBuy</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.min.css">
+  </head>
+  <body>
+
+
+
+    
+<div class="container">
+
+  <div style="box-shadow:0 2px 6px 0 rgba(0,0,0, 0.2);">
+  <!-- topbar -->
+  <div class="top-bar top-bar_primary">
+    <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
+    <span>我的收藏</span>
+  </div>
+  <!-- tabs -->
+  <div class="tabs" style="box-shadow:none;">
+    <ul>
+      <li class="active"><a href="#">标题1</a></li>
+      <li><a href="#">标题2</a></li>
+    </ul>
+  </div>
+  <!-- tabs end -->
+  </div>
+  
+  <div class="list-table box">
+    <table>
+      
+      <tr>
+        <td class="list-table__cover">
+          <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/a1/66/d3/a166d335d493192cf4c620a910b8d158.jpg"></a>
+        </td>
+        <td class="list-table__content"><a href="#">名字</a></td>
+        <td class="list-table__action"><i class="fa fa-star text-primary"></i></td>
+      </tr>
+      
+      <tr>
+        <td class="list-table__cover">
+          <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/a1/66/d3/a166d335d493192cf4c620a910b8d158.jpg"></a>
+        </td>
+        <td class="list-table__content"><a href="#">名字</a></td>
+        <td class="list-table__action"><i class="fa fa-star text-primary"></i></td>
+      </tr>
+      
+      <tr>
+        <td class="list-table__cover">
+          <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/a1/66/d3/a166d335d493192cf4c620a910b8d158.jpg"></a>
+        </td>
+        <td class="list-table__content"><a href="#">名字</a></td>
+        <td class="list-table__action"><i class="fa fa-star text-primary"></i></td>
+      </tr>
+      
+      <tr>
+        <td class="list-table__cover">
+          <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/a1/66/d3/a166d335d493192cf4c620a910b8d158.jpg"></a>
+        </td>
+        <td class="list-table__content"><a href="#">名字</a></td>
+        <td class="list-table__action"><i class="fa fa-star text-primary"></i></td>
+      </tr>
+      
+      <tr>
+        <td class="list-table__cover">
+          <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/a1/66/d3/a166d335d493192cf4c620a910b8d158.jpg"></a>
+        </td>
+        <td class="list-table__content"><a href="#">名字</a></td>
+        <td class="list-table__action"><i class="fa fa-star text-primary"></i></td>
+      </tr>
+      
+      <tr>
+        <td class="list-table__cover">
+          <a href="#"><img src="https://s-media-cache-ak0.pinimg.com/564x/a1/66/d3/a166d335d493192cf4c620a910b8d158.jpg"></a>
+        </td>
+        <td class="list-table__content"><a href="#">名字</a></td>
+        <td class="list-table__action"><i class="fa fa-star text-primary"></i></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <script src="js/app.min.js"></script>
+
+    
+<script>
+$(function(){
+  $(".list-table i").on("click", function(e){
+    e.preventDefault();
+    $(this).parents("tr").animate({opacity:'0'},500,function(){
+      $(this).remove();
+    });
+  });
+});
+</script>
+
+  </body>
+</html>

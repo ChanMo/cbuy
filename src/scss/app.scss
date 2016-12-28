@@ -24,6 +24,99 @@
   box-shadow: 0 1px 4px 0 rgba(black, 0.12);
 }
 
+/** tabs **/
+.tabs {
+  margin-bottom: .5rem;
+  box-shadow: 0 2px 6px 0 rgba(black, 0.2);
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 3rem;
+    list-style-type: none;
+    background: $primary-color;
+    li {
+      display: block;
+      width: 100%;
+      padding: 0 .75rem 1.125rem 0.75rem;
+      border-bottom: 0.125rem solid transparent;
+      text-align: center;
+      line-height: calc(3rem - 0.125rem);
+      a {
+        font-size: 0.85rem;
+        color: white;
+      }
+    }
+    .active {
+      border-color: white;
+    }
+  }
+}
+
+/** list **/
+.list {
+  margin-bottom: .5rem;
+  width: 100%;
+  background: white;
+  box-shadow: 0 1px 4px 0 rgba(black, 0.12);
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      padding: .5rem 1rem;
+      &:not(:last-child){
+        border-bottom: 1px solid rgba(black, 0.06);
+      }
+      p {
+        margin: 0;
+        font-size: 0.85rem;
+        color: rgba(black, 0.87);
+        span {
+          font-size: 0.75rem;
+          color: rgba(black, 0.54);
+        }
+      }
+    }
+  }
+}
+/** list end **/
+
+/** list table **/
+.list-table {
+  table {
+    tr {
+      &:not(:last-child){
+        border-bottom: 1px solid rgba(black, 0.06);
+      }
+    }
+    td {
+      padding: .5rem 1rem;
+      border: none;
+      box-sizing: border-box;
+      vertical-align: middle;
+    }
+  }
+  &__cover {
+    width: 5.5rem;
+  }
+  &__content {
+    padding: .5rem 0 !important;
+    a {
+      font-size: 0.85rem;
+      color: rgba(black, 0.87);
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  &__action {
+    width: 3rem;
+    color: rgba(black, 0.38);
+  }
+}
+/** list table end **/
+
 
 input[type='checkbox'] {
   display: none;
@@ -231,6 +324,7 @@ div {
 @import 'comment';
 @import 'shop';
 @import 'integral';
+@import 'member';
 
 @include home2;
 @include comment;
@@ -238,3 +332,4 @@ div {
 @include cart;
 @include checkout;
 @include integral;
+@include member;
