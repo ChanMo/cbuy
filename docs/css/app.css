@@ -3053,32 +3053,53 @@ input[type='checkbox']:checked + label:before {
 
 .integral {
   padding: 1rem; }
+  .integral__topbar {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12); }
   .integral__header {
+    display: table-cell;
+    width: calc(100vw - 2rem);
     background: white;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
     height: 25vh;
     position: relative;
-    margin-bottom: 1rem; }
-    .integral__header h5 {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%); }
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.12);
+    text-align: center;
+    vertical-align: middle; }
+    .integral__header h2 {
+      display: inline-block;
+      margin: 0;
+      color: white; }
     .integral__header small {
+      display: inline-block;
+      margin: 0 .3rem;
       font-size: 0.75rem;
-      margin-left: .3rem; }
+      color: rgba(255, 255, 255, 0.89); }
   .integral__logs {
+    margin: .5rem 0;
     background: white;
-    padding: 1rem .5rem; }
-    .integral__logs h5 {
-      border-left: 5px solid rgba(255, 0, 0, 0.8);
-      padding-left: .5rem;
-      font-size: 1.1rem; }
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.12); }
+    .integral__logs h6 {
+      line-height: 2.5rem;
+      margin: 0;
+      padding: 0 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 0.85rem;
+      color: rgba(0, 0, 0, 0.87); }
+      .integral__logs h6 a {
+        display: inline-block;
+        float: right;
+        font-size: 0.75rem;
+        color: rgba(0, 0, 0, 0.54); }
+        .integral__logs h6 a:after {
+          content: "\f105";
+          font-family: FontAwesome;
+          margin-left: 3px; }
     .integral__logs ul {
       margin: 0;
-      padding: 0;
+      padding: .5rem 1rem;
       list-style-type: none; }
       .integral__logs ul a {
         display: block;
-        color: #333;
-        line-height: 2rem;
-        border-bottom: 1px solid #efefef; }
+        font-size: 0.8rem;
+        color: rgba(0, 0, 0, 0.54);
+        line-height: 2rem; }

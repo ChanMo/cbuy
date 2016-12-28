@@ -1,0 +1,65 @@
+@mixin integral {
+  .integral {
+    padding: 1rem;
+    &__topbar {
+      box-shadow: 0 1px 5px rgba(black, 0.12);
+    }
+    &__header {
+      display: table-cell;
+      width: calc(100vw - 2rem);
+      background: white;
+      background: linear-gradient(135deg, #e91e63, #9c27b0);
+      height: 25vh;
+      position: relative;
+      box-shadow: 0 1px 4px 0 rgba(black, 0.12);
+      text-align: center;
+      vertical-align: middle;
+      h2 {
+        display: inline-block;
+        margin: 0;
+        color: white;
+      }
+      small {
+        display: inline-block;
+        margin: 0 .3rem;
+        font-size: 0.75rem;
+        color: rgba(white, 0.89);
+      }
+    }
+    &__logs {
+      margin: .5rem 0;
+      background: white;
+      box-shadow: 0 1px 4px 0 rgba(black, 0.12);
+      h6 {
+        line-height: 2.5rem;
+        margin: 0;
+        padding: 0 1rem;
+        border-bottom: 1px solid rgba(black, 0.08);
+        font-size: 0.85rem;
+        color: rgba(black, 0.87);
+        a {
+          display: inline-block;
+          float: right;
+          font-size: 0.75rem;
+          color: rgba(black, 0.54);
+          &:after {
+            content: "\f105";
+            font-family: FontAwesome;
+            margin-left: 3px;
+          }
+        }
+      }
+      ul {
+        margin: 0;
+        padding: .5rem 1rem;
+        list-style-type: none;
+        a {
+          display: block;
+          font-size: 0.8rem;
+          color: rgba(black, 0.54);
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+}

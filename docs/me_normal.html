@@ -1,30 +1,43 @@
-{% extends "base.html" %}
-{% block main %}
-<div class="container me">
+<!doctype html>
+<html class="no-js" lang="zh-hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>CBuy</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.min.css">
+  </head>
+  <body>
 
-  <div class="me__header" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/4f/a2/78/4fa27877e254fc53c729a6e6a153a7dd.jpg);">
+
+
+    
+<div class="container me-normal">
+
+  <div class="me-normal__header" style="background-image:url(https://s-media-cache-ak0.pinimg.com/564x/4f/a2/78/4fa27877e254fc53c729a6e6a153a7dd.jpg);">
     <img src="https://s-media-cache-ak0.pinimg.com/564x/8e/90/40/8e904015f86c2a6c02ad6e4301d0ee7c.jpg">
-    <h6>会员名</h6>
+    <h6>chenmoumou</h6>
   </div>
 
-  <div class="me__item">
-    <h6>订单<a href="order.html">查看所有</a></h6>
+  <div class="me-normal__item">
+    <h6>All orders<a href="order.html">view all</a></h6>
     <ul>
       <li><a href="#"><img src="img/icons/svg/wallet.svg"><span>1</span><p>待付款</p></a></li>
       <li><a href="#"><img src="img/icons/svg/package.svg"><span>1</span><p>待发货</p></a></li>
       <li><a href="#"><img src="img/icons/svg/truck.svg"><span>1</span><p>待收获</p></a></li>
-      <li><a href="comment_list.html"><img src="img/icons/svg/pen.svg"><span>1</span><p>待评价</p></a></li>
+      <li><a href="#"><img src="img/icons/svg/pen.svg"><span>1</span><p>待评价</p></a></li>
       <li><a href="#"><img src="img/icons/svg/piggy-bank-2.svg"><span>1</span><p>退款/售后</p></a></li>
     </ul>
   </div>
 
-  <div class="me__item">
-    <h6>其他</h6>
+  <div class="me-normal__item">
+    <h6>Tools</h6>
     <table>
       <tr>
         <td><a href="#"><img src="img/icons/svg/shop.svg"><p>我的信息</p></a></td>
         <td><a href="address.html"><img src="img/icons/svg/truck-1.svg"><p>收获地址</p></a></td>
-        <td><a href="integral.html"><img src="img/icons/svg/wallet.svg"><p>我的积分</p></a></td>
+        <td><a href="#"><img src="img/icons/svg/wallet.svg"><p>我的钱包</p></a></td>
         <td><a href="#"><img src="img/icons/svg/cash.svg"><p>会员码</p></a></td>
 
       </tr>
@@ -52,16 +65,24 @@
     <div>购物车</div>
   </a>
 
-  <a href="me.html" class="active">
+  <a href="me_normal.html" class="active">
     <i class="fa fa-user"></i>
     <div>我的</div>
   </a>
 </div>
-{% endblock %}
-{% block js %}
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <script src="js/app.min.js"></script>
+
+    
 <script>
   $(function(){
-    $(".me__header img").addClass("active");
+    $(".me-normal__header img").addClass("active");
   });
 </script>
-{% endblock %}
+
+  </body>
+</html>

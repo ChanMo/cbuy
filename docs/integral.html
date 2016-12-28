@@ -13,17 +13,17 @@
 
 
     
-<div class="top-bar">
+<div class="top-bar integral__topbar">
   <a href="javascript:window.history.back();" class="float-left"><i class="fa fa-angle-left fa-lg"></i></a>
   <span>我的积分</span>
 </div>
 
 <div class="container integral ">
   <div class="integral__header">
-    <h5>120<small>积分</small></h5>
+    <h2>862</h2><small>积分</small>
   </div>
   <div class="integral__logs">
-    <h5>积分记录</h5>
+    <h6>积分记录<a href="#">更多</a></h6>
     <ul>
       
       <li><a href="#">2016/12/12 12:12 评价送积分20</a></li>
@@ -47,5 +47,36 @@
     <script src="js/app.min.js"></script>
 
     
+<script>
+$(function(){
+  var count = $("h2").html();
+  var number = 0;
+  $("h2").remove();
+  count_arr = count.split("");
+
+  for(var i=0; i<count_arr.length; i++){
+    $(".integral__header small").before("<h2>0</h2>");
+  }
+  number_ani(count_arr, 0);
+
+});
+
+function number_ani(count_arr, i){
+  var j = 0;
+  var timer = setInterval(function(){
+    if(i < count_arr.length){
+      if(j <= parseInt(count_arr[i])){
+        $(".integral__header h2").eq(i).html(j++);
+      }else{
+        i++;
+        j = 0;
+      }
+    }else{
+      clearInterval(timer);
+    }
+  },30);
+}
+</script>
+
   </body>
 </html>
