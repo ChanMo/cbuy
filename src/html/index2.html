@@ -113,6 +113,8 @@
 {% block js %}
 <script>
 $(function(){
+  $(".slide").slide();
+
   var notices = $(".notice-scrolling");
   var notices_index = 1;
   window.setInterval(function(){

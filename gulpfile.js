@@ -19,7 +19,11 @@ var del = require('del');
 /** sass **/
 gulp.task('sass', function(){
     return gulp.src('src/scss/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+          includePaths: [
+            'node_modules/ju-css/src/scss',
+          ]
+        }).on('error', sass.logError))
         .pipe(gulp.dest('src/css'))
         .pipe(gulp.dest('docs/css'))
         .pipe(browserSync.reload({stream:true}));
