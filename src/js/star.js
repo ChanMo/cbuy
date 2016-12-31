@@ -1,0 +1,1 @@
+../../node_modules/input-star/star.js

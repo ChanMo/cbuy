@@ -187,6 +187,14 @@ div {
   }
 }
 
+.top-bar_primary {
+  background: $primary-color;
+  color: white;
+  a {
+    color: white;
+  }
+}
+
 .bottom-bar {
   position: fixed;
   bottom: 0;
@@ -262,7 +270,88 @@ div {
   }
 }
 
-
+.coupon {
+  display: flex;
+  position: relative;
+  margin-bottom: 1rem;
+  background: white;
+  //box-shadow: 0 1px 4px 0 rgba(black, 0.12);
+  overflow: hidden;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 4px;
+    height: 100%;
+    background-image: url(../img/border_round.png);
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+  }
+  &__left {
+    padding: 1rem 0;
+    width: 30%;
+    text-align: center;
+    background: map-get($color, 'orange');
+    color: white;
+    h2 {
+      margin: 0;
+      i {
+        font-size: 0.7rem;
+      }
+    }
+    span {
+      font-size: 0.75rem;
+      color: rgba(white, 0.70);
+    }
+  }
+  &__right {
+    padding: 1rem;
+    width: 70%;
+    box-sizing: border-box;
+    p {
+      font-size: 0.85rem;
+      color: rgba(black, 0.87);
+      span {
+        font-size: 0.8rem;
+        color: rgba(black, 0.38);
+      }
+      a {
+        display: inline-block;
+        float: right;
+        padding: 0 .5rem;
+        border: 1px solid rgba(black, 0.38);
+        border-radius: .2rem;
+        font-size: 0.75rem;
+        color: rgba(black, 0.54);
+      }
+    }
+  }
+  @mixin coupon_status($y:0, $x:0) {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 61px;
+      height: 61px;
+      background-image:url(https://misc.360buyimg.com/user/myjd-2015/css/i/coupon20160915.png);
+      background-position: $y $x;
+      transform: scale(1.2);
+    }
+    .coupon__left {
+      background: rgba(black, 0.38);
+    }
+  }
+  &_used {
+    @include coupon_status();
+  }
+  &_expired {
+    @include coupon_status(-345px, 0);
+  }
+}
 
 
 .category {
