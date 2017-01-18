@@ -414,6 +414,7 @@ div {
 @import 'shop';
 @import 'integral';
 @import 'member';
+@import 'search';
 
 @include home2;
 @include comment;
@@ -422,3 +423,4 @@ div {
 @include checkout;
 @include integral;
 @include member;
+@include search;

@@ -3362,3 +3362,46 @@ input[type='checkbox']:checked + label:before {
               text-decoration: none; }
         .member__main table td:hover i, .member__main table td:hover a {
           color: #673ab7; }
+
+.search__topbar {
+  margin-bottom: .5rem; }
+  .search__topbar table {
+    margin: 0;
+    background: transparent; }
+    .search__topbar table td {
+      border: none;
+      padding: 0;
+      vertical-align: middle;
+      background: transparent; }
+      .search__topbar table td *, .search__topbar table td a {
+        color: rgba(0, 0, 0, 0.87); }
+      .search__topbar table td input {
+        margin: 0;
+        height: auto;
+        line-height: 3rem;
+        border: none;
+        background: transparent;
+        font-size: 0.85rem; }
+      .search__topbar table td:not(:nth-child(2)) {
+        padding: 0 1rem;
+        white-space: nowrap;
+        width: 1%; }
+      .search__topbar table td:last-child {
+        font-size: 0.85rem; }
+
+.search__container {
+  padding: .5rem 1rem;
+  box-sizing: border-box; }
+
+.search h6 {
+  margin: 1rem 0 .3rem;
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.87); }
+
+.search span {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.06);
+  font-size: 0.8rem;
+  padding: .3rem .6rem;
+  margin: .3rem;
+  color: rgba(0, 0, 0, 0.54); }

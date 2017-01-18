@@ -1,0 +1,55 @@
+@mixin search {
+  .search {
+    &__topbar {
+      margin-bottom: .5rem;
+      table {
+        margin: 0;
+        background: transparent;
+        td {
+          border: none;
+          padding: 0;
+          vertical-align: middle;
+          background: transparent;
+          *, a {
+            color: rgba(black, 0.87);
+          }
+          input {
+            margin: 0;
+            //padding: .8rem .5rem;
+            height: auto;
+            line-height: 3rem;
+            border: none;
+            background: transparent;
+            font-size: 0.85rem;
+            //background: rgba(white, 0.6);
+          }
+          &:not(:nth-child(2)) {
+            padding: 0 1rem;
+            white-space: nowrap;
+            width: 1%;
+          }
+          &:last-child {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+    &__container {
+      padding: .5rem 1rem;
+      box-sizing: border-box;
+    }
+    h6 {
+      margin: 1rem 0 .3rem;
+      font-size: 0.85rem;
+      color: rgba(black, 0.87);
+    }
+    span {
+      display: inline-block;
+      background: rgba(black, 0.06);
+      font-size: 0.8rem;
+      padding: .3rem .6rem;
+      margin: .3rem;
+      color: rgba(black, 0.54);
+    }
+  }
+}

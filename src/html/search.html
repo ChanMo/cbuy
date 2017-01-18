@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block main %}
+<div class="container search">
+
+  <!-- topbar -->
+  <div class="search__topbar">
+    <table>
+    <tr>
+      <td>
+        <a href="javascript:window.history.back();">
+          <i class="fa fa-angle-left fa-lg"></i>
+        </a>
+      </td>
+      <td><form><input type="search" placeholder="商品名"></form></td>
+      <td onclick="search()">搜索</td>
+    </tr>
+    </table>
+  </div>
+
+  <div class="search__container">
+  <h6>最近搜索</h6>
+  <div class="search__history">
+    {% for i in range(0,4) %}
+    <span>商品名称{{i}}</span>
+    {% endfor %}
+  </div>
+
+  <h6>猜你想找</h6>
+  <div class="search__recommend">
+    {% for i in range(0,4) %}
+    <span>商品名称{{i}}</span>
+    {% endfor %}
+  </div>
+  </div>
+
+</div>
+{% endblock %}
+{% block js %}
+<script>
+$(function(){
+  $("input").focus();
+  $("input").on("change", function(){
+    search();
+  });
+});
+function search(){
+  $("form").submit();
+}
+</script>
+{% endblock %}
