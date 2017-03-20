@@ -1,0 +1,84 @@
+<!doctype html>
+<html class="no-js" lang="zh-hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>CBuy</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.min.css">
+  </head>
+  <body>
+
+
+
+    
+<div class="container search">
+
+  <!-- topbar -->
+  <div class="search__topbar">
+    <table>
+    <tr>
+      <td>
+        <a href="javascript:window.history.back();">
+          <i class="fa fa-angle-left fa-lg"></i>
+        </a>
+      </td>
+      <td><form><input type="search" placeholder="商品名"></form></td>
+      <td onclick="search()">搜索</td>
+    </tr>
+    </table>
+  </div>
+
+  <div class="search__container">
+  <h6>最近搜索</h6>
+  <div class="search__history">
+    
+    <span>商品名称0</span>
+    
+    <span>商品名称1</span>
+    
+    <span>商品名称2</span>
+    
+    <span>商品名称3</span>
+    
+  </div>
+
+  <h6>猜你想找</h6>
+  <div class="search__recommend">
+    
+    <span>商品名称0</span>
+    
+    <span>商品名称1</span>
+    
+    <span>商品名称2</span>
+    
+    <span>商品名称3</span>
+    
+  </div>
+  </div>
+
+</div>
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <script src="js/juss.min.js"></script>
+    <script src="js/app.min.js"></script>
+
+    
+<script>
+$(function(){
+  $("input").focus();
+  $("input").on("change", function(){
+    search();
+  });
+});
+function search(){
+  $("form").submit();
+}
+</script>
+
+  </body>
+</html>
