@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block main %}
+
+<div class="top-bar" style="background:#d9325d;color:white;">
+  <a href="javascript:window.history.back();" class="float-left" style="color:white;"><i class="fa fa-angle-left fa-lg"></i></a>
+  <span>农副产品</span>
+  <a href="order.html" class="float-right" style="color:white;">
+    <i class="fa fa-shopping-cart"></i>
+  </a>
+</div>
+
+
+<div class="container sub-list">
+  <img src="http://img.hb.aicdn.com/a2a0a25b536937df2dfb69211ed8816051b48d574d7519-ZevX70_fw658">
+
+  <form>
+    <table>
+      <tr>
+        {% for i in range(0,3) %}
+        <td>
+          <select><option>test</option></select>
+        </td>
+        {% endfor %}
+      </tr>
+    </table>
+  </form>
+
+  <div class="sub-header">
+    <h6>农副产品</h6>
+    <span>精选热门商品</span>
+  </div>
+
+  <div class="goods">
+    {% for i in range(0,5) %}
+    <a href="#">
+      <div>
+      <img src="https://s-media-cache-ak0.pinimg.com/564x/57/3d/22/573d22517606988ad774f30ac3fba8de.jpg">
+      <p>商品名称（一行显示）</p>
+      <p><span>50.00</span></p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
