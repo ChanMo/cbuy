@@ -2881,12 +2881,12 @@ div {
     margin: 0;
     background: transparent; }
     .sub-list form table td {
-      padding: .5rem 3vw;
+      padding: .8rem 3vw;
       border: none; }
       .sub-list form table td select {
         margin: 0;
         height: auto;
-        line-height: 1.8rem;
+        line-height: 1.6rem;
         border-color: #d9325d;
         border-radius: .5rem;
         background: white; }
@@ -2903,29 +2903,31 @@ div {
       color: white; }
     .sub-list .sub-header span {
       font-size: 0.8rem; }
-  .sub-list .goods:before, .sub-list .goods:after {
-    content: '';
-    display: block;
-    clear: both; }
-  .sub-list .goods a {
-    display: block;
-    padding: .5rem;
-    box-sizing: border-box;
-    width: 50%;
-    float: left; }
-    .sub-list .goods a:nth-child(2n+1) {
-      padding-right: 0.25rem; }
-    .sub-list .goods a:nth-child(2n) {
-      padding-left: 0.25rem; }
-    .sub-list .goods a div {
-      background: white; }
-      .sub-list .goods a div p {
-        margin: 0;
-        padding: 0 .5rem;
-        font-size: 0.8rem;
-        color: rgba(0, 0, 0, 0.87); }
-        .sub-list .goods a div p span {
-          color: #d9325d; }
+  .sub-list .goods {
+    padding: .5rem 0 0; }
+    .sub-list .goods:before, .sub-list .goods:after {
+      content: '';
+      display: block;
+      clear: both; }
+    .sub-list .goods a {
+      display: block;
+      padding: 0 .5rem .5rem .5rem;
+      box-sizing: border-box;
+      width: 50%;
+      float: left; }
+      .sub-list .goods a:nth-child(2n+1) {
+        padding-right: 0.25rem; }
+      .sub-list .goods a:nth-child(2n) {
+        padding-left: 0.25rem; }
+      .sub-list .goods a div {
+        background: white; }
+        .sub-list .goods a div p {
+          margin: 0;
+          padding: 0 .5rem;
+          font-size: 0.8rem;
+          color: rgba(0, 0, 0, 0.87); }
+          .sub-list .goods a div p span {
+            color: #d9325d; }
 
 .comment {
   padding: 1rem 0;
